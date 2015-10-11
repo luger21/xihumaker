@@ -101,7 +101,7 @@ abstract class Driver {
                     $this->options[PDO::ATTR_EMULATE_PREPARES]  =   false;
                 }
                 $this->linkID[$linkNum] = new PDO( $config['dsn'], $config['username'], $config['password'],$this->options);
-
+	            print_r($this->options);
 	            print_r($this->linkID[$linkNum]);
 	            print_r($config);
             }catch (\PDOException $e) {
