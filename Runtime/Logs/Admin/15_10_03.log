@@ -1,0 +1,647 @@
+[ 2015-10-03T15:49:55+08:00 ] ::1 /xihu/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+
+[ 2015-10-03T15:49:55+08:00 ] ::1 /xihu/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001341s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+
+[ 2015-10-03T15:49:55+08:00 ] ::1 /xihu/admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000781s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2015-10-03T15:50:03+08:00 ] ::1 /xihu/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000948s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: lite /Users/zhuang/www/xihu/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `xh_member` [ RunTime:0.0037s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `xh_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `xh_action` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `xh_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `xh_action_log` [ RunTime:0.0079s ]
+SQL: INSERT INTO `xh_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','0','member','1','1443858603','admin在2015-10-03 15:50登录了后台') [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xh_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 1 /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `xh_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1443772203 LIMIT 1   [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `xh_member` [ RunTime:0.0024s ]
+SQL: UPDATE `xh_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.0004s ]
+SQL: UPDATE `xh_member` SET `login`=`login`+1,`last_login_time`='1443858603',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0003s ]
+
+[ 2015-10-03T15:50:03+08:00 ] ::1 /xihu/admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+
+[ 2015-10-03T16:03:47+08:00 ] ::1 /xihu/admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001693s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+
+[ 2015-10-03T16:03:56+08:00 ] ::1 /xihu/admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+
+[ 2015-10-03T16:03:58+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000827s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+
+[ 2015-10-03T16:04:03+08:00 ] ::1 /xihu/admin.php?s=/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000782s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+
+[ 2015-10-03T16:04:04+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000913s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+
+[ 2015-10-03T16:04:05+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000827s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+
+[ 2015-10-03T16:04:09+08:00 ] ::1 /xihu/admin.php?s=/Category/edit/id/40/pid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000951s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+
+[ 2015-10-03T16:04:26+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005361s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+
+[ 2015-10-03T16:04:30+08:00 ] ::1 /xihu/admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+
+[ 2015-10-03T16:04:33+08:00 ] ::1 /xihu/admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004298s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+
+[ 2015-10-03T16:04:40+08:00 ] ::1 /xihu/admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004312s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+
+[ 2015-10-03T16:04:43+08:00 ] ::1 /xihu/admin.php?s=/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001269s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+
+[ 2015-10-03T16:04:44+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001583s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+
+[ 2015-10-03T16:04:44+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2015-10-03T16:04:47+08:00 ] ::1 /xihu/admin.php?s=/Category/edit/id/1/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001351s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+
+[ 2015-10-03T16:05:10+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004740s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+
+[ 2015-10-03T16:05:13+08:00 ] ::1 /xihu/admin.php?s=/Category/add/pid/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003965s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002590s ]
+
+[ 2015-10-03T16:05:16+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004890s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+
+[ 2015-10-03T16:06:16+08:00 ] ::1 /xihu/admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001209s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+
+[ 2015-10-03T16:06:25+08:00 ] ::1 /xihu/admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001847s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002733s ]
+
+[ 2015-10-03T16:06:28+08:00 ] ::1 /xihu/admin.php?s=/Article/index/cate_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001574s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+
+[ 2015-10-03T16:06:30+08:00 ] ::1 /xihu/admin.php?s=/Article/index/cate_id/39.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000981s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+
+[ 2015-10-03T16:06:32+08:00 ] ::1 /xihu/admin.php?s=/Article/index/cate_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001309s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+
+[ 2015-10-03T16:06:38+08:00 ] ::1 /xihu/admin.php?s=/Article/index/cate_id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001605s ]
+
+[ 2015-10-03T16:06:43+08:00 ] ::1 /xihu/admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002308s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003010s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+
+[ 2015-10-03T16:06:44+08:00 ] ::1 /xihu/admin.php?s=/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000972s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+
+[ 2015-10-03T16:06:45+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+
+[ 2015-10-03T16:06:58+08:00 ] ::1 /xihu/admin.php?s=/Model/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+
+[ 2015-10-03T16:07:39+08:00 ] ::1 /xihu/admin.php?s=/Model/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003541s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001586s ]
+SQL: SHOW COLUMNS FROM `xh_menu` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`title`,`url` FROM `xh_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `xh_menu` WHERE ( pid !=0 AND url like '%Model/update%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `xh_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `xh_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xh_model` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `xh_model` WHERE `name` = 'ads' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ModelModel::getFields() /Users/zhuang/www/xihu/Application/Admin/Model/ModelModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 1 for Admin\Model\ModelModel::getAttribute() /Users/zhuang/www/xihu/Application/Admin/Model/ModelModel.class.php 第 89 行.
+SQL: INSERT INTO `xh_model` (`name`,`title`,`extend`,`engine_type`,`need_pk`,`create_time`,`update_time`,`status`,`field_sort`,`attribute_list`) VALUES ('ads','首页轮播图','0','MyISAM','1','1443859659','1443859659','1','','') [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: id /Users/zhuang/www/xihu/Application/Admin/Model/ModelModel.class.php 第 76 行.
+SQL: SHOW COLUMNS FROM `xh_action` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `xh_action` WHERE `name` = 'update_model' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_action_log` [ RunTime:0.0024s ]
+SQL: INSERT INTO `xh_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('7','1','0','model','7','1443859659','操作url：/xihu/admin.php?s=/Model/update.html') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: id /Users/zhuang/www/xihu/Application/Admin/Controller/ModelController.class.php 第 131 行.
+
+[ 2015-10-03T16:07:41+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000759s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-10-03T16:07:43+08:00 ] ::1 /xihu/admin.php?s=/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005603s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+
+[ 2015-10-03T16:07:45+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000807s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+
+[ 2015-10-03T16:07:46+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001274s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001554s ]
+
+[ 2015-10-03T16:08:00+08:00 ] ::1 /xihu/admin.php?s=/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001597s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+
+[ 2015-10-03T16:08:03+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001614s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+
+[ 2015-10-03T16:08:09+08:00 ] ::1 /xihu/admin.php?s=/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000766s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+
+[ 2015-10-03T16:08:47+08:00 ] ::1 /xihu/admin.php?s=/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000486s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002714s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `xh_menu` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`title`,`url` FROM `xh_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `xh_menu` WHERE ( pid !=0 AND url like '%Category/add%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `xh_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `xh_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `xh_category` WHERE `name` = 'xtgl' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for arr2str() /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] Missing argument 1 for arr2str() /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] Missing argument 1 for arr2str() /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] Missing argument 1 for arr2str() /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed /Users/zhuang/www/xihu/Application/Common/Common/function.php 第 62 行.
+NOTIC: [2] json_encode() expects at least 1 parameter, 0 given /Users/zhuang/www/xihu/ThinkPHP/Library/Think/Model.class.php 第 1145 行.
+SQL: INSERT INTO `xh_category` (`title`,`name`,`groups`,`allow_publish`,`check`,`icon`,`display`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`id`,`pid`,`create_time`,`update_time`,`status`) VALUES ('系统管理','xtgl','','1','0','0','1','0','10','','','','','','','','0','0','1443859727','1443859727','1') [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `xh_action` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `xh_action` WHERE `name` = 'update_category' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_action_log` [ RunTime:0.0036s ]
+SQL: INSERT INTO `xh_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('11','1','0','category','41','1443859727','操作url：/xihu/admin.php?s=/Category/add.html') [ RunTime:0.0006s ]
+
+[ 2015-10-03T16:08:48+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000899s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+
+[ 2015-10-03T16:08:51+08:00 ] ::1 /xihu/admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001002s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+
+[ 2015-10-03T16:08:55+08:00 ] ::1 /xihu/admin.php?s=/Article/index/cate_id/41.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000814s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+
+[ 2015-10-03T16:08:57+08:00 ] ::1 /xihu/admin.php?s=/article/add/cate_id/41/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000978s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+
+[ 2015-10-03T16:09:02+08:00 ] ::1 /xihu/admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004332s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+
+[ 2015-10-03T16:09:04+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000784s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+
+[ 2015-10-03T16:09:06+08:00 ] ::1 /xihu/admin.php?s=/Category/edit/id/41/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001693s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+
+[ 2015-10-03T16:09:47+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002346s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+
+[ 2015-10-03T16:09:53+08:00 ] ::1 /xihu/admin.php?s=/model/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001141s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+
+[ 2015-10-03T16:09:59+08:00 ] ::1 /xihu/admin.php?s=/Attribute/add/model_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000836s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+
+[ 2015-10-03T16:10:29+08:00 ] ::1 /xihu/admin.php?s=/Attribute/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000748s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `xh_menu` [ RunTime:0.0052s ]
+SQL: SELECT `id`,`title`,`url` FROM `xh_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `pid` FROM `xh_menu` WHERE ( pid !=0 AND url like '%Attribute/update%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 63 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xh_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT DISTINCT  `group` FROM `xh_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `xh_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `xh_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `xh_attribute` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `xh_attribute` WHERE `name` = 'url' AND `model_id` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `xh_attribute` (`name`,`title`,`type`,`field`,`extra`,`value`,`remark`,`is_show`,`is_must`,`validate_type`,`validate_rule`,`error_info`,`validate_time`,`auto_type`,`auto_rule`,`auto_time`,`id`,`model_id`,`status`,`create_time`,`update_time`) VALUES ('url','链接','string','varchar(255) NOT NULL','','','','1','1','regex','','','3','function','','3','0','7','1','1443859829','1443859829') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_model` [ RunTime:0.0022s ]
+SQL: SELECT `name`,`extend` FROM `xh_model` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL:                 SHOW TABLES LIKE 'xh_ads'; [ RunTime:0.0003s ]
+SQL: SELECT `engine_type`,`need_pk` FROM `xh_model` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL:                 CREATE TABLE IF NOT EXISTS `xh_ads` (
+                `id`  int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键' ,
+                `url`  varchar(255) NOT NULL  COMMENT '链接' ,
+                PRIMARY KEY (`id`)
+                )
+                ENGINE=MyISAM
+                DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+                CHECKSUM=0
+                ROW_FORMAT=DYNAMIC
+                DELAY_KEY_WRITE=0
+                ; [ RunTime:0.0176s ]
+SQL: SELECT `name` FROM `xh_model` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_action` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `xh_action` WHERE `name` = 'update_attribute' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_action_log` [ RunTime:0.0042s ]
+SQL: INSERT INTO `xh_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('8','1','0','attribute','40','1443859829','操作url：/xihu/admin.php?s=/Attribute/update.html') [ RunTime:0.0007s ]
+
+[ 2015-10-03T16:10:31+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000864s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+
+[ 2015-10-03T16:10:36+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000794s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+
+[ 2015-10-03T16:10:38+08:00 ] ::1 /xihu/admin.php?s=/Category/edit/id/41/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006231s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+
+[ 2015-10-03T16:10:51+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000866s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+
+[ 2015-10-03T16:10:53+08:00 ] ::1 /xihu/admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000717s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+
+[ 2015-10-03T16:10:57+08:00 ] ::1 /xihu/admin.php?s=/Category/edit/id/41/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002144s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+
+[ 2015-10-03T16:11:44+08:00 ] ::1 /xihu/admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000138s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004818s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001569s ]
+
+[ 2015-10-03T16:11:45+08:00 ] ::1 /xihu/admin.php?s=/Model/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001929s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+

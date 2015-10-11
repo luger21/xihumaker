@@ -1,0 +1,22 @@
+[ 2015-10-03T15:49:48+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006788s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001918s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0294s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0053s ]
+
+[ 2015-10-03T16:05:53+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000758s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0032s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+

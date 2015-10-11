@@ -1,0 +1,1047 @@
+[ 2015-09-27T19:41:49+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011138s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002209s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0453s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443354108 AND ( deadline = 0 OR deadline > 1443354108 ) ORDER BY `id` DESC  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0059s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0017s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.037262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001822s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354108 AND ( deadline = 0 OR deadline > 1443354108 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002685s ]
+
+[ 2015-09-27T19:46:35+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0026s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443354395 AND ( deadline = 0 OR deadline > 1443354395 ) ORDER BY `id` DESC  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015869s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354395 AND ( deadline = 0 OR deadline > 1443354395 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2015-09-27T19:46:39+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xh_document_article` [ RunTime:0.0047s ]
+SQL: SELECT `id`,`parse`,`content`,`template`,`bookmark` FROM `xh_document_article` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `xh_document` SET `view`=view+1 WHERE `id` = 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0052s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `id` < '1' AND `pid` = 0 AND `category_id` = 2 AND `status` = 1 AND `create_time` < 1443354398 AND ( deadline = 0 OR deadline > 1443354398 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `id` > '1' AND `pid` = 0 AND `category_id` = 2 AND `status` = 1 AND `create_time` < 1443354398 AND ( deadline = 0 OR deadline > 1443354398 ) ORDER BY id LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `xh_category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ documentDetailAfter ] --START--
+SQL: SHOW COLUMNS FROM `xh_attachment` [ RunTime:0.0123s ]
+SQL: SELECT `id`,`uid`,`title`,`type`,`source`,`record_id`,`download`,`size`,`dir`,`sort`,`create_time`,`update_time`,`status` FROM `xh_attachment` WHERE `record_id` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+INFO: Run Addons\Attachment\AttachmentAddon [ RunTime:0.020986s ]
+SQL: SHOW COLUMNS FROM `xh_addons` [ RunTime:0.0025s ]
+SQL: SELECT `config` FROM `xh_addons` WHERE `name` = 'SocialComment' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.060651s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013180s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.025732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.038612s ]
+INFO: Run Addons\SocialComment\SocialCommentAddon [ RunTime:0.017538s ]
+INFO: [ documentDetailAfter ] --END-- [ RunTime:0.038658s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013557s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.025732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.038957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2015-09-27T19:55:51+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000868s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0059s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443354950 AND ( deadline = 0 OR deadline > 1443354950 ) ORDER BY `id` DESC  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021796s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354950 AND ( deadline = 0 OR deadline > 1443354950 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005987s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2015-09-27T19:55:51+08:00 ] ::1 /xihu/index.php?s=/Home/Article/index/category/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000712s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0023s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `name` = 'blog' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0035s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354951 AND ( deadline = 0 OR deadline > 1443354951 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2015-09-27T19:55:56+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000936s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0053s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0066s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443354956 AND ( deadline = 0 OR deadline > 1443354956 ) ORDER BY `id` DESC  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020640s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354956 AND ( deadline = 0 OR deadline > 1443354956 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003631s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2015-09-27T19:55:58+08:00 ] ::1 /xihu/index.php?s=/Home/Article/index/category/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000714s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0024s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0043s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `name` = 'blog' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354958 AND ( deadline = 0 OR deadline > 1443354958 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2015-09-27T19:56:01+08:00 ] ::1 /xihu/index.php?s=/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000840s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443354961 AND ( deadline = 0 OR deadline > 1443354961 ) ORDER BY `id` DESC  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443354961 AND ( deadline = 0 OR deadline > 1443354961 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2015-09-27T19:59:00+08:00 ] ::1 /xihu/index.php?s=/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000748s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0069s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443355139 AND ( deadline = 0 OR deadline > 1443355139 ) ORDER BY `id` DESC  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017377s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443355139 AND ( deadline = 0 OR deadline > 1443355139 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004737s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2015-09-27T19:59:48+08:00 ] ::1 /xihu/index.php?s=/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0044s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0088s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0059s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443355187 AND ( deadline = 0 OR deadline > 1443355187 ) ORDER BY `id` DESC  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.028467s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0016s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443355187 AND ( deadline = 0 OR deadline > 1443355187 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0012s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2015-09-27T19:59:49+08:00 ] ::1 /xihu/index.php?s=/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000738s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0048s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1443355189 AND ( deadline = 0 OR deadline > 1443355189 ) ORDER BY `id` DESC  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0047s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019704s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000265s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443355189 AND ( deadline = 0 OR deadline > 1443355189 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2015-09-27T19:59:50+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000793s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000436s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+
+[ 2015-09-27T19:59:54+08:00 ] ::1 /xihu/index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000982s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0029s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2015-09-27T19:59:54+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000803s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0021s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2015-09-27T19:59:57+08:00 ] ::1 /xihu/index.php?s=/Home/Article/index/category/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001304s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0031s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xh_category` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `name` = 'blog' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `xh_channel` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `xh_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022482s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `xh_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `xh_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xh_document` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `xh_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1443355197 AND ( deadline = 0 OR deadline > 1443355197 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2015-09-27T20:00:48+08:00 ] ::1 /xihu/index.php?s=/Home/Article/index/category/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001497s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0034s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T20:05:40+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001434s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0041s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T20:05:40+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001971s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+
+[ 2015-09-27T20:06:08+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.18635449305985285
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002346s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T20:06:15+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000981s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0025s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: lite /Users/zhuang/www/xihu/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+
+[ 2015-09-27T20:06:15+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.2564379478015698
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0027s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+
+[ 2015-09-27T20:06:26+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.49888901504506844
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001414s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0038s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2015-09-27T20:06:30+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001404s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0038s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: lite /Users/zhuang/www/xihu/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+
+[ 2015-09-27T20:06:30+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.3137804814671
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001428s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0023s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T20:06:38+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000355s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003029s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0045s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2015-09-27T20:06:38+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.9144348624219781
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001346s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0053s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+
+[ 2015-09-27T20:06:41+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.4571897651143294
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001609s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T20:06:46+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001382s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0026s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T20:06:46+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html&random=0.5198081324402242
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0043s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T20:06:53+08:00 ] ::1 /xihu/index.php?s=/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001639s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0029s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: lite /Users/zhuang/www/xihu/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+
+[ 2015-09-27T20:06:53+08:00 ] ::1 /xihu/index.php?s=/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001754s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T20:06:53+08:00 ] ::1 /xihu/index.php?s=/Home/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001802s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0067s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0017s ]
+
+[ 2015-09-27T21:55:06+08:00 ] ::1 /xihu/index.php?s=/Home/Article/index/category/blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001595s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0109s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+
+[ 2015-09-27T21:55:07+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0023s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T21:55:33+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000826s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0078s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0006s ]
+
+[ 2015-09-27T21:55:35+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000992s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0038s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T21:55:35+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000742s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0051s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2015-09-27T21:55:37+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000793s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T21:55:40+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001428s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0038s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xihu.xh_document_base' doesn't exist
+
+[ 2015-09-27T23:05:08+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001907s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T23:05:11+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000700s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0041s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T23:05:12+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000703s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0039s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T23:05:13+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000699s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T23:06:24+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000857s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0039s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T23:31:47+08:00 ] ::1 /xihu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000715s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0058s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2015-09-27T23:31:51+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Maker.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000710s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0039s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T23:31:53+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001203s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+ERR: 模板不存在:./Application/Home/View/default/Article/maker/detail.html
+
+[ 2015-09-27T23:32:03+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Maker.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000767s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0040s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T23:32:04+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000896s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0016s ]
+
+[ 2015-09-27T23:32:05+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0041s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T23:32:07+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000942s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0022s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
+[ 2015-09-27T23:32:12+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Maker.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000964s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+
+[ 2015-09-27T23:34:11+08:00 ] ::1 /xihu/index.php?s=/Home/Article/lists/category/Maker.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000857s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0048s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+
+[ 2015-09-27T23:34:14+08:00 ] ::1 /xihu/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001603s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+
+[ 2015-09-27T23:34:17+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001766s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+
+[ 2015-09-27T23:40:28+08:00 ] ::1 /xihu/index.php?s=/Home/Article/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000704s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `xh_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `xh_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+
