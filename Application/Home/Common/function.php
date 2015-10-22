@@ -68,3 +68,16 @@ function get_nav_url($url){
     }
     return $url;
 }
+
+/**
+ * 实现面包屑导航
+ * @param $url
+ * @return string
+ */
+function get_nav_on($url){
+	$on = '';
+	if(strstr(strtolower($url),strtolower(CONTROLLER_NAME.'/'.ACTION_NAME))!==false)
+		$on = 'on';
+
+	return $on;
+}

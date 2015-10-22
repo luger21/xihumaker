@@ -1,31 +1,20 @@
-$(function(){
-	//图标隐藏菜单
-	$(".entrance").hover(function(){
-		$(this).children(".user-menu").show();
-	},function(){
-		$(this).children(".user-menu").hide();
-	});
-
-	$('.action .detailed').each(function(){
-		$(this).click(function() {
-        	detailed_content();
-        	return false;
+$(document).ready(function() {
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $("#back-to-top").fadeIn(300);
+                } else {
+                    $("#back-to-top").fadeOut(300);
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#back-to-top").click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                },
+                100);
+                return false;
+            });
         });
-  	});
-
-	$('.action .thinkbox-image').each(function(){
-		$(this).click(function() {
-        	thinkbox_image();
-        	return false;
-        });
-  	});
-
-	(function(){
-		var $nav = $("#nav"), $current = $nav.children("[data-key=" + $nav.data("key") + "]");
-		if($nav.length){
-			$current.addClass("current");
-		} else {
-			$("#nav").children().first().addClass("current");
-		}
-	})();
 });

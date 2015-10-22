@@ -1,47 +1,96 @@
-<extend name="Base/common"/>
+<include file="Public/header" />
+<div class="banner">
+	
+</div>
+<div class="wrap">
+	<div class="main-item mt20 clearfix">
+	<h1 class="active-tit"><i>创客活动</i></h1>
+	<ul class="active-list">
+		<li>
+			<a href="#"><img src="__IMG__/main-img1.png" ></a>
+			<p>
+				<span>简约 | </span><em>手工陶瓷钟</em>
+				<i>创客汇满带的是一种对生活的情怀</i>
+			</p>
+		</li>
+		<li>
+			<a href="#"><img src="__IMG__/main-img2.png" ></a>
+			<p>
+				<span>厨具 | </span><em>擀面杖的故事</em>
+				<i>创客汇满带的是一种对生活的情怀</i>
+			</p>
+		</li>
+		<li>
+			<a href="#"><img src="__IMG__/main-img3.png" ></a>
+			<p>
+				<span>越野 | </span><em>一山一水一背包</em>
+				<i>创客汇满带的是一种对生活的情怀</i> 
+			</p>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<div class="active-more">
+		<a href="#">查看更多</a>
+	</div>
+	</div>
+</div>
+<div class="wrap">
+<div class="main-item main-item2 mt20 clearfix">
+	<h1 class="active-tit active-tit2"><i>1566公益基金</i></h1>
 
-<block name="header">
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h2>源自相同起点，演绎不同精彩！</h2>
-            <p class="lead"></p>
-        </div>
-    </header>
-</block>
+	<ul class="active-list active-list2">
+		<li><a href="#"><img src="__IMG__/main-img4.png" ></a>
+		<h6>{$Think.lang._ABOUT1566_}</h6>
+		</li>
+		<li><a href="#"><img src="__IMG__/main-img5.png" ></a>
+		<h6>申请基金</h6>
+		</li>
+		<li><a href="#"><img src="__IMG__/main-img6.png" ></a>
+		<h6>公益捐赠</h6>
+		</li>
+		<li class="actionlist-tit">
+			资助的项目
+		</li>
+		<li><a href="#"><img src="__IMG__/main-img7.png" ></a>
+		</li>
+		<li><a href="#"><img src="__IMG__/main-img8.png" ></a>
+		</li>
+		<li><a href="#"><img src="__IMG__/main-img9.png" ></a>
+		</li>
 
-<block name="side">
-<!-- 左侧 nav
-================================================== -->
-    <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-            {:W('Category/lists', array(1, true))}
-        </ul>
-    </div>
-</block>
+	</ul>
 
-<block name="body">
-    <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-            <article:list name="article" category="1" child="true">
-                <div class="">
-                    <h3><a href="{:U('Article/detail?id='.$article['id'])}">{$article.title}</a></h3>
-                </div>
-                <div>
-                    <p class="lead">{$article.description}</p>
-                </div>
-                <div>
-                    <span><a href="{:U('Article/detail?id='.$article['id'])}">查看全文</a></span>
-                    <span class="pull-right">
-                        <span class="author">{$article.uid|get_username}</span>
-                        <span>于 {$article.create_time|date='Y-m-d H:i',###}</span> 发表在 <span>
-                        <a href="{:U('Article/lists?category='.get_category_name($article['category_id']))}">{$article.category_id|get_category_title}</a></span> ( 阅读：{$article.view} )
-                    </span>
-                </div>
-                <hr/>
-            </article:list>
+	<div class="clear"></div>
+	<div class="active-more active-more2">
+		<a href="#">查看更多</a>
+	</div>
+</div>
+</div>
 
-        </section>
-    </div>
-</block>
+<div class="wrap">
+<div class="main-item main-item3 mt20 clearfix">
+	<h1 class="active-tit active-tit3"><i>各界关注</i></h1>
+
+	<ul class="active-list active-list3">
+		<li><a href="detialgz.php"><img src="__IMG__/main-img10.png" ></a>
+		<h6>{$Think.lang._ABOUT1566_}</h6>
+		</li>
+		<li><a href="detialgz.php"><img src="__IMG__/main-img11.png" ></a>
+		<h6>申请基金</h6>
+		</li>
+		<li><a href="detialgz.php"><img src="__IMG__/main-img12.png" ></a>
+		<h6>申请基金</h6>
+		</li>
+		
+
+	</ul>
+
+	<div class="clear"></div>
+	<div class="active-more active-more3">
+		<a href="#">查看更多</a>
+	</div>
+</div>
+</div>
+<include file="Public/footer" />
+</body>
+</html>
