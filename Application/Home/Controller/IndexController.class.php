@@ -30,4 +30,11 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+
+	public function a(){
+		echo $_GET['l'];
+
+		echo C('DEFAULT_LANG');
+		echo L('_MODULE_NOT_EXIST_');
+	}
 }
