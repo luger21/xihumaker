@@ -5,4 +5,5 @@
 .buildpath
 */.DS_Store
 /Application/Common/Conf/config.php
+/Application/User/Conf/config.php
 /Runtime
