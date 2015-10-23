@@ -4,131 +4,29 @@
 		<div class="loaction">
 			<a href='/'>首页</a> <em>/</em>
 			<a href='/'>全部活动</a> <em>/</em>
-			“十万火计”系列活动——“我要当领袖”首飞深圳
 		</div>
 	</div>
 	<div class="wrap ">
 		<div class="gz-box">
 			<ul class="clearfix">
+                <volist name="list" id="data">
 				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
+					<a href="{:U('Attentions/detail?id='.$data['id'])}">
+						<img src="{$data['cover_id']|get_cover='path'}" ></a>
 					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
+						<a href="{:U('Attentions/detail?id='.$data['id'])}">
+							<h3>{$data.title}</h3>
+							<p class="gz-listinfo">{$data.description}</p>
+							<em class='gz-icon'>{$data.view}</em>
 						</a>
 					</div>
 					<div class="gz-time">
 						<span>
-							2015年
-							<br>6月6日</span>
+                            {$data.create_time|date='Y年<br>m月d日',###}
+						</span>
 					</div>
 				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
-				<li>
-					<a href="#">
-						<img src="__IMG__/img4.jpg" ></a>
-					<div class="gz-listcon">
-						<a href="#">
-							<h3>十万火计系列活动——“我要当领袖”首飞深圳</h3>
-							<p class="gz-listinfo">我们会陆续添加线上&线下活动，包括产品试用、社区福利、微活动等最，包括产品试用、社区福利、微活动等最...</p>
-							<em class='gz-icon'>32413</em>
-						</a>
-					</div>
-					<div class="gz-time">
-						<span>
-							2015年
-							<br>6月6日</span>
-					</div>
-				</li>
-
+                </volist>
 			</ul>
 			<div class="list-more">向下滚动以加载更多</div>
 		</div>

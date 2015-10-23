@@ -40,5 +40,6 @@ class IndexController extends HomeController {
 
 		echo C('DEFAULT_LANG');
 		echo L('_MODULE_NOT_EXIST_');
+		$this->display('index_old');
 	}
 }
