@@ -14,7 +14,7 @@ use OT\DataDictionary;
  * 前台首页控制器
  * 主要获取首页聚合数据
  */
-class IndexController extends HomeController {
+class ResourcesController extends HomeController {
 
 	//系统首页
     public function index(){
@@ -30,15 +30,5 @@ class IndexController extends HomeController {
         $this->display();
     }
 
-	public function about(){
 
-		$this->display();
-	}
-
-	public function a(){
-		echo $_GET['l'];
-
-		echo C('DEFAULT_LANG');
-		echo L('_MODULE_NOT_EXIST_');
-	}
 }

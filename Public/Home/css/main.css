@@ -90,12 +90,12 @@
 .bbslist li.bbsItem{ margin-right: 0;}
 .bbslist li img{ width: 230px; height: 147px;}
 .bbslist li span{ height: 58px; line-height: 42px; display: block; overflow: hidden; width: 230px; font-size: 18px; color: #666; text-align: center;}
-.gybox li{ height: 428px; width: 400px; background-color: #fff; border-radius: 10px; float: left; margin-right: 40px; margin-bottom: 40px;}
+.gybox li{ height: 335px; width: 312px; background-color: #fff; border-radius: 10px; float: left; margin-right: 32px; margin-bottom: 30px;}
 .gybox li.gyli{ margin: 0;}
-.gybox img{ width: 400px; height: 266px;}
-.gy-tit{ display: block; height: 64px; padding: 5px 20px 0 20px; font-size: 24px; line-height: 32px; color: #666;}
-.gy-info{ height: 40px; line-height: 40px; font-size: 24px; color: #aeaeae; padding: 0 20px; width: 360px;}
-.gy-infol{ padding-left: 50px; float: left;background:url(../images/icon-time2.png) no-repeat 0 center;}
+.gybox img{ width: 312px; height: 208px;}
+.gy-tit{ display: block; height: 64px; padding: 5px 20px 0 20px; font-size: 18px; line-height: 32px; color: #666;}
+.gy-info{ height: 30px; line-height: 30px; font-size: 18px; color: #aeaeae; padding: 0 10px; width: 292px;}
+.gy-infol{ padding-left: 35px; float: left;background:url(../images/icon-time2.png) no-repeat 0 center;}
 .gy-infor{padding-left: 50px;float: right;background:url(../images/icon6.png) no-repeat 0 center; color: #1bb383;}
 .icon-gy1{ background-image:url(../images/icon6.png); }
 .icon-gy2{ background-image:url(../images/icon7.png); color: #fd4b4b; padding-left:40px;}
@@ -116,3 +116,24 @@
 .gz-time{ width: 120px; text-align: center; color: #666; font-size: 18px; line-height: 32px; height: 120px; float: left; border-radius: 60px; border:1px solid #ccc; margin-left: 20px;}
 .gz-time span{ padding-top: 25px; display: block;}
 .detialck-tit{font-size: 18px; color: #666; padding: 25px 0;  font-weight: normal;}
+.inbanner-re,.inbanner-about{ height: 415px; width: 100%; background:url(../images/in_banner2.jpg) no-repeat center 15px;}
+.re-top{ text-align: center; font-size: 24px; color: #666; line-height: 48px; padding:50px 0 30px}
+.re-top em{ color: #1f9245}
+.re-img{ margin-bottom: 50px;}
+.re-tit{ font-size: 24px; margin-bottom: 30px; padding-left: 40px; line-height: 32px; height: 32px; color: #1f9245;background:url(../images/icon-10.png) no-repeat 0 0;}
+.re-info{ color:#333; font-size: 18px; line-height: 32px;}
+.re-btn{ height: 88px; padding-bottom: 50px; width: 100%;}
+.inbanner-about{ background-image: url(../images/in_banner3.jpg);}
+.about-tit{ margin: 50px 0; height: 52px; line-height: 52px; font-size: 24px; color: #333;}
+.about-tit span{background:url(../images/icon-11.png) no-repeat 0 center; display: block; float: left; padding-left: 56px;}
+.about-tit span.icon-2{margin-left: 50px; background-image: url(../images/icon-12.png);}
+.about-tit span.icon-3{margin-left: 55px; background-image: url(../images/icon-13.png);}
+.about-tit span.icon-4{ float: right; background-image: url(../images/icon-14.png);padding-left: 62px;}
+.about-info{ color: #333; padding-bottom: 30px;}
+.about-info img{ margin-top: 30px;}
+.about-tit2{ width: 500px; margin: 40px auto 30px; text-align: center;}
+.about-tit2 h3{ font-size: 32px; font-weight: normal;color: #000; border-bottom: 1px solid #1e9544; padding-bottom: 25px;}
+.about-tit2 p{ color: #666; font-size: 12px; line-height: 32px; padding-top: 10px;}
+.about-fc{ margin-bottom: 60px; height: 400px; width: 100%; background:url(../images/in_banner4.jpg) no-repeat 0 center;}
+
+
