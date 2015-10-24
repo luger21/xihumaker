@@ -14,18 +14,17 @@ use OT\DataDictionary;
  * 前台首页控制器
  * 主要获取首页聚合数据
  */
-class AttentionsController extends HomeController {
-
+class ProjectController extends HomeController {
 	protected function _initialize(){
-		$_GET['category'] = 43;
+		$_GET['category'] = 2;
 	}
 
 	//系统首页
     public function index(){
-
-	    $list = $this->lists();
-        $this->assign('list',$list);//列表
-        $this->assign('page',D('Document')->page);//分页
+	    if($_GET['p_status'])
+	        $where['p_status'] = $_GET['p_status'];
+	    $list = $this->pro_lists($where);
+	    $this->assign('list',$list);//列表
         $this->display();
     }
 
@@ -35,14 +34,14 @@ class AttentionsController extends HomeController {
 		$list = $this->lists($p);
 		foreach($list as $key=>$value){
 			$new_list[$key]['id'] = $value['id'];
-			$new_list[$key]['view'] = $value['view'];
+			$new_list[$key]['act-icon'] = 'act-icon'.rand(0,4);
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
 			$new_list[$key]['title'] = $value['title'];
 			$new_list[$key]['description'] = $value['description'];
 			$new_list[$key]['create_time'] = $value['create_time'];
 		}
-		echo json_encode($new_list);
+		//print_r($new_list);
+        echo json_encode($new_list);
 	}
-
 
 }

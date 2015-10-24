@@ -29,7 +29,7 @@ class ActivityController extends HomeController {
         $this->display();
     }
 
-	//系统首页
+	//翻页api接口
 	public function api(){
 		$p = $_GET['p']?$_GET['p']:0;
 		$list = $this->lists($p);
@@ -42,7 +42,7 @@ class ActivityController extends HomeController {
 			$new_list[$key]['create_time'] = $value['create_time'];
 		}
 		//print_r($new_list);
-        echo json_encode($value);
+        echo json_encode($new_list);
 	}
 
 }

@@ -84,7 +84,7 @@
 .loaction{ font-size: 18px; color: #666; line-height: 80px;}
 .loaction a,.loaction em{ color: #aeaeae;}.loaction em{ padding: 0 10px;}
 .detialCon{ padding: 20px 0px;}
-.bbsbox h5{ margin-bottom: 35px; height: 40px; font-size: 32px; color: #666;background:url(../images/icon-bbstit.png) no-repeat; padding-left: 30px; font-weight: normal; line-height: 40px;  }
+.bbsbox h5{ margin-bottom: 35px; height: 30px; font-size: 24px; color: #666;background:url(../images/icon-bbstit.png) no-repeat; padding-left: 30px; font-weight: normal; line-height: 30px;  }
 .bbsbox{ padding: 60px 0 0 0;}
 .bbslist li{ width: 230px; height: 205px; border-radius: 10px; overflow: hidden; background-color: #fff; float:left;margin-right: 20px; margin-bottom: 20px;}
 .bbslist li.bbsItem{ margin-right: 0;}
@@ -135,5 +135,38 @@
 .about-tit2 h3{ font-size: 32px; font-weight: normal;color: #000; border-bottom: 1px solid #1e9544; padding-bottom: 25px;}
 .about-tit2 p{ color: #666; font-size: 12px; line-height: 32px; padding-top: 10px;}
 .about-fc{ margin-bottom: 60px; height: 400px; width: 100%; background:url(../images/in_banner4.jpg) no-repeat 0 center;}
-
-
+.poppubBox{ background-color: #191919; width: 1000px; position: fixed; top: 100px; left: 50%; margin-left: -500px;}
+.pubconbox{ position: relative;}
+.pubconbox h3{ padding-top: 30px; color: #1f9245; font-size: 24px; text-align: center; font-weight: normal; margin:0 0 30px 0;}
+.pubconbox h3.pub-tit{ color: #fff;}
+.pubcon-info{ color: #fff; margin: 40px auto; width: 616px; font-size: 12px; line-height: 24px;} 
+.pub-contact{margin: 40px auto; padding: 20px 30px; border: 1px solid #1f9245; border-radius: 10px; height: 122px; width: 554px; }
+.pub-erweima{ float: right;}
+.pub-conleft{ float: left;}
+.pub-conleft div{ height: 32px; color: #aeaeae; font-size: 18px; line-height: 35px; height: 35px; padding-left: 40px; background:url(../images/icon-tel.png) no-repeat 0 center;}
+.pub-conleft div.pub-qqicon{ margin-top: 34px; background-image: url(../images/icon-qq.png);}
+.pop-close{ cursor: pointer; background:url(../images/icon-close.png) no-repeat; width: 48px; height: 47px; position: absolute; top: 20px; right: 40px;}
+.pop-close:hover{background-image: url(../images/icon-closeon.png);}
+.poppubbg{ height: 100%; position: absolute; width: 100%; top: 0; left: 0; background-color: #000; opacity: 0.3;}
+.pub-gycon{ width: 620px; padding-top: 30px; margin: 0 auto; height: 330px; color: #fff; line-height: 26px; font-size: 12px;}
+.pop-pre{ width: 47px; height: 93px; position: absolute;left: 42px;top:250px;cursor: pointer; background:url(../images/icon-left.png) no-repeat;}
+.pop-next{width: 47px; height: 93px;position: absolute;right: 42px;top:250px;cursor: pointer; background:url(../images/icon-right.png) no-repeat;}
+.pub-btn{ width: 160px; height: 60px; margin: 30px auto; font-size: 18px; color: #fff; text-align: center; line-height: 60px; background-color: #0f8c58; border-radius: 5px; cursor: pointer;}
+.banner_pro{ padding-top: 20px;}
+.catePro{ width: 1000px; margin: 30px 0;}
+.catePro li{ width: 76px; cursor: pointer; text-align: center; float: left; margin-right: 108px; font-size: 18px; color: #aeaeae; }
+.catePro li.cate-li{ margin-right: 0;}
+.catePro li span{ display: block;padding-top: 62px; width: 76px; background:url(../images/icon-cate1.png) no-repeat center 0;}
+.catePro li.on{ color: #1f9245;}
+.catePro li.on span{background-image: url(../images/icon-cate1on.png);}
+.catePro li.on span.icon-cate2{background-image: url(../images/icon-cate2on.png);}
+.catePro li.on span.icon-cate3{background-image: url(../images/icon-cate3on.png);}
+.catePro li.on span.icon-cate4{background-image: url(../images/icon-cate4on.png);}
+.catePro li.on span.icon-cate5{background-image: url(../images/icon-cate5on.png);}
+.catePro li.on span.icon-cate6{background-image: url(../images/icon-cate6on.png);}
+.catePro li span.icon-cate1{ background-position: center 6px;}
+.catePro li span.icon-cate2{ background-position: center 9px;background-image: url(../images/icon-cate2.png);}
+.catePro li span.icon-cate3{ background-position: center 6px;background-image: url(../images/icon-cate3.png);}
+.catePro li span.icon-cate4{ background-position: center 0px;background-image: url(../images/icon-cate4.png);}
+.catePro li span.icon-cate5{ background-position: center 2px;background-image: url(../images/icon-cate5.png);}
+.catePro li span.icon-cate6{ background-position: center 12px;background-image: url(../images/icon-cate6.png);}

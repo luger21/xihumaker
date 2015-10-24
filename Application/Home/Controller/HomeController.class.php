@@ -40,6 +40,23 @@ class HomeController extends Controller {
 
 
 	/* 文档模型列表页 */
+	public function pro_lists($where,$p = 1,$field='*'){
+		/* 分类信息 */
+		$category = $this->category();
+
+		/* 获取当前分类列表 */
+		$list = M('DocumentProject')->where($where)->page($p, $category['list_row'])->field($field)->order('id')->select();;
+		if(false === $list){
+			$this->error('获取列表数据失败！');
+		}
+		return $list;
+		/* 模板赋值并渲染模板 */
+		//$this->assign('category', $category);
+		//$this->assign('list', $list);
+		//$this->display($category['template_lists']);
+	}
+
+	/* 文档模型列表页 */
 	public function lists($p = 1){
 		/* 分类信息 */
 		$category = $this->category();
