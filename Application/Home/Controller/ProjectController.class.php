@@ -19,26 +19,42 @@ class ProjectController extends HomeController {
 		$_GET['category'] = 2;
 	}
 
+	private $table = 'DocumentProject';
+
+	private $p_name = array(
+			1=>'进行中',
+			2=>'组团队',
+			3=>'组队中',
+			4=>'已商业',
+			5=>'已结束',
+		);
+
 	//系统首页
     public function index(){
 	    if($_GET['p_status'])
 	        $where['p_status'] = $_GET['p_status'];
-	    $list = $this->pro_lists($where);
+	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
+	    $table = 'DocumentProject';
+	    $list = $this->pro_lists($this->table,$where,$field);
 	    $this->assign('list',$list);//列表
+	    $this->assign('p_name',$this->p_name);
         $this->display();
     }
 
 	//翻页api接口
 	public function api(){
+		if($_GET['p_status'])
+			$where['p_status'] = $_GET['p_status'];
 		$p = $_GET['p']?$_GET['p']:0;
-		$list = $this->lists($p);
+		$field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
+		$table = 'DocumentProject';
+		$list = $this->pro_lists($this->table,$where,$field,$p);
 		foreach($list as $key=>$value){
 			$new_list[$key]['id'] = $value['id'];
-			$new_list[$key]['act-icon'] = 'act-icon'.rand(0,4);
-			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
+			$new_list[$key]['cover_url'] = get_cover($value['cover_url'], 'path');
 			$new_list[$key]['title'] = $value['title'];
-			$new_list[$key]['description'] = $value['description'];
-			$new_list[$key]['create_time'] = $value['create_time'];
+			$new_list[$key]['begin_time'] = $value['begin_time'];
+			$new_list[$key]['p_name'] = $this->p_name[$value['p_status']];
 		}
 		//print_r($new_list);
         echo json_encode($new_list);

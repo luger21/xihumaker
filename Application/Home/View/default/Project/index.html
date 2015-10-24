@@ -29,11 +29,11 @@
 		<ul class="gybox clearfix">
             <volist name="list" id="data">
 			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<img src="{$data['cover_url']|get_cover='path'}">
+				<span class='gy-tit'>{$data.title}</span>
 				<div class="gy-info">
-					<span class='gy-infol'>2015/08/21</span>
-					<span class='gy-infor icon-gy1'>进行中</span>
+					<span class='gy-infol'> {$data.begin_time|date='Y/m/d',###}</span>
+					<span class='gy-infor icon-gy{$data.p_status}'>{$p_name[$data[p_status]]}</span>
 				</div>
 			</li>
             </volist>

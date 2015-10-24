@@ -16,19 +16,37 @@ use OT\DataDictionary;
  */
 class BbsController extends HomeController {
 
+	private $table = 'DocumentMaker';
+
+	protected function _initialize(){
+		$_GET['category'] = 40;
+
+	}
 	//系统首页
     public function index(){
 
-        $category = D('Category')->getTree();
-        $lists    = D('Document')->lists(null);
-
-        $this->assign('category',$category);//栏目
-        $this->assign('lists',$lists);//列表
-        $this->assign('page',D('Document')->page);//分页
-
-                 
+	    if($_GET['p_status'])
+		    $where['p_status'] = $_GET['p_status'];
+	    $field = 'id,ch_title as title,ch_content as content,cover_url';
+	    $list = $this->pro_lists($this->table,$where,$field);
+	    $this->assign('list',$list);//列表
         $this->display();
     }
 
+	//翻页api接口
+	public function api(){
+		if($_GET['p_status'])
+			$where['p_status'] = $_GET['p_status'];
+		$p = $_GET['p']?$_GET['p']:0;
+		$field = 'id,ch_title as title,ch_content as content,cover_url,area';
+		$list = $this->pro_lists($this->table,$where,$field,$p);
+		foreach($list as $key=>$value){
+			$new_list[$key]['id'] = $value['id'];
+			$new_list[$key]['cover_url'] = get_cover($value['cover_url'], 'path');
+			$new_list[$key]['title'] = $value['title'];
+			$new_list[$key]['begin_time'] = $value['begin_time'];
+		}
+		echo json_encode($new_list);
+	}
 
 }
