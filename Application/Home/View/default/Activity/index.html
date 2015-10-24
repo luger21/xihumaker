@@ -8,75 +8,24 @@
 	<div class="activebox">
 		<div class="activebox-tit"></div>
 		<ul class="activeList ">
+            <volist name="list" id="data">
 			<li>
 				<div class="act-listl">
-					<div class="act-icon act-icon2 fl"></div>
-					<div class="act-tit"><em>2014年<br>12月6日</em></div>
-
+					<div class="act-icon act-icon{$a|rand=4} fl"></div>
+					<div class="act-tit"><em>{$data.create_time|date='Y年',###}<br>{$data.create_time|date='m月d日',###}</em></div>
 				</div>
 				<div class="act-listr fr">
-					<img src="__IMG__/img1.jpg" height="200" width="200">
+					<img src="{$data['cover_id']|get_cover='path'}" height="200" width="200">
 					<div class="act-listrtext">
-						<h5>XDemo 暨上海国际创客大赛 2015 秋季深圳站</h5>
+						<h5>{$data.title}</h5>
 						<p class="act-listCon">
-							活动地址：深圳D³in 铟立方·未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629，限额人数：50人。未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629。
+                            {$data.description}
 						</p>
 						<a href="detial.php">阅读全文</a>
 					</div>
 				</div>
 			</li>
-			<li>
-				<div class="act-listl">
-					<div class="act-icon fl"></div>
-					<div class="act-tit"><em>2014年<br>12月6日</em></div>
-
-				</div>
-				<div class="act-listr fr">
-					<img src="__IMG__/img1.jpg" height="200" width="200">
-					<div class="act-listrtext">
-						<h5>XDemo 暨上海国际创客大赛 2015 秋季深圳站</h5>
-						<p class="act-listCon">
-							活动地址：深圳D³in 铟立方·未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629，限额人数：50人。未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629。
-						</p>
-						<a href="detial.php">阅读全文</a>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="act-listl">
-					<div class="act-icon act-icon3 fl"></div>
-					<div class="act-tit"><em>2014年<br>12月6日</em></div>
-
-				</div>
-				<div class="act-listr fr">
-					<img src="__IMG__/img1.jpg" height="200" width="200">
-					<div class="act-listrtext">
-						<h5>XDemo 暨上海国际创客大赛 2015 秋季深圳站</h5>
-						<p class="act-listCon">
-							活动地址：深圳D³in 铟立方·未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629，限额人数：50人。未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629。
-						</p>
-						<a href="detial.php">阅读全文</a>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="act-listl">
-					<div class="act-icon act-icon4 fl"></div>
-					<div class="act-tit"><em>2014年<br>12月6日</em></div>
-
-				</div>
-				<div class="act-listr fr">
-					<img src="__IMG__/img1.jpg" height="200" width="200">
-					<div class="act-listrtext">
-						<h5>XDemo 暨上海国际创客大赛 2015 秋季深圳站</h5>
-						<p class="act-listCon">
-							活动地址：深圳D³in 铟立方·未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629，限额人数：50人。未来实验室 深圳市福田区福田保税区花样年福年广场 B4 栋 629。
-						</p>
-						<a href="detial.php">阅读全文</a>
-					</div>
-				</div>
-			</li>
-			
+            </volist>
 		</ul>
 
 		<div class="act-listbot">

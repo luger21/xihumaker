@@ -15,20 +15,34 @@ use OT\DataDictionary;
  * 主要获取首页聚合数据
  */
 class ActivityController extends HomeController {
+	protected function _initialize(){
+		$_GET['category'] = 2;
+	}
 
 	//系统首页
     public function index(){
 
-        $category = D('Category')->getTree();
-        $lists    = D('Document')->lists(null);
-
-        $this->assign('category',$category);//栏目
-        $this->assign('lists',$lists);//列表
-        $this->assign('page',D('Document')->page);//分页
-
+	    $list = $this->lists();
+	    $this->assign('list',$list);//列表
+	    $this->assign('page',D('Document')->page);//分页
                  
         $this->display();
     }
 
+	//系统首页
+	public function api(){
+		$p = $_GET['p']?$_GET['p']:0;
+		$list = $this->lists($p);
+		foreach($list as $key=>$value){
+			$new_list[$key]['id'] = $value['id'];
+			$new_list[$key]['act-icon'] = 'act-icon'.rand(0,4);
+			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
+			$new_list[$key]['title'] = $value['title'];
+			$new_list[$key]['description'] = $value['description'];
+			$new_list[$key]['create_time'] = $value['create_time'];
+		}
+		//print_r($new_list);
+        echo json_encode($value);
+	}
 
 }

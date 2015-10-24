@@ -20,7 +20,6 @@ class AttentionsController extends HomeController {
     public function index(){
 
 	    $list = $this->lists();
-	    print_r($list);
         $this->assign('list',$list);//列表
         $this->assign('page',D('Document')->page);//分页
 
