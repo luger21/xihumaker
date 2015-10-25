@@ -379,10 +379,10 @@ class ArticleController extends AdminController {
         if(empty($id)){
             $this->error('参数不能为空！');
         }
-
         // 获取详细数据 
         $Document = D('Document');
         $data = $Document->detail($id);
+
         if(!$data){
             $this->error($Document->getError());
         }
@@ -417,6 +417,8 @@ class ArticleController extends AdminController {
      */
     public function update(){
         $document   =   D('Document');
+	    if($_POST['ch_title'])
+		    $_POST['title'] = $_POST['ch_title'];
         $res = $document->update();
         if(!$res){
             $this->error($document->getError());

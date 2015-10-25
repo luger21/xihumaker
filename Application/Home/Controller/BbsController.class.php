@@ -37,6 +37,8 @@ class BbsController extends HomeController {
 	public function api(){
 		if($_GET['p_status'])
 			$where['p_status'] = $_GET['p_status'];
+		if($_GET['area'])
+			$where['area'] = $_GET['area'];
 		$p = $_GET['p']?$_GET['p']:0;
 		$field = 'id,ch_title as title,ch_content as content,cover_url,area';
 		$list = $this->pro_lists($this->table,$where,$field,$p);
