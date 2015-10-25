@@ -34,7 +34,6 @@ class ProjectController extends HomeController {
 	    if($_GET['p_status'])
 	        $where['p_status'] = $_GET['p_status'];
 	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
-	    $table = 'DocumentProject';
 	    $list = $this->pro_lists($this->table,$where,$field);
 	    $this->assign('list',$list);//列表
 	    $this->assign('p_name',$this->p_name);

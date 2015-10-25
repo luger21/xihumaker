@@ -97,4 +97,29 @@ class HomeController extends Controller {
 			$this->error('分类不存在或被禁用！');
 		}
 	}
+
+	/* 文档模型详情页 */
+	public function article_detail($id){
+		/* 标识正确性检测 */
+		if(!($id && is_numeric($id))){
+			$this->error('内容ID错误！');
+		}
+
+		/* 获取详细信息 */
+		$Document = D('Document');
+		$info = $Document->detail($id);
+		if(!$info){
+			$this->error($Document->getError());
+		}
+
+		/* 分类信息 */
+		$category = $this->category($info['category_id']);
+
+
+		/* 更新浏览数 */
+		$map = array('id' => $id);
+		$Document->where($map)->setInc('view');
+
+		return $info;
+	}
 }

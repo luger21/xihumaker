@@ -4,22 +4,21 @@
 </div>
 <div class="bgwhite">
 <div class="wrap detialBox">
-	<span class='icon-time'>2015/09/12 13:30</span>
-	<span class='icon-address'>深圳市福田区福田保税区花样年福年广场 B4 栋 629</span>
+	<span class='icon-time'>{$info.create_time|date='Y/m/d H:i',###}</span>
+	<span class='icon-address'>{$info.address}</span>
 </div>
 </div>
 
 <div class="wrap">
 	<div class="loaction">
-		<a href='/'>首页</a>  <em>/</em>  <a href='/'>全部活动</a>  <em>/</em>  “十万火计”系列活动——“我要当领袖”首飞深圳 
+		<a href="{:U('Index/index')}">首页</a>  <em>/</em>  <a href="{:U('Activity/index')}">全部活动</a>  <em>/</em>{$info.title}
 	</div>
 </div>
 
 <div class="wrap bgwhite">
 	
 	<p class="detialCon">
-		<img src="images/img2.jpg" height="1458" width="1098">
-
+        {$info.content}
 	</p>
 
 </div>

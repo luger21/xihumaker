@@ -1,96 +1,252 @@
 <include file="Public/header" />
-<div class="banner">
-	
+<div class="slide-main" id="touchMain">
+	<a class="prev" href="javascript:;" stat="prev1001"><img src="__IMG__/icon-bannerpre.png" /></a>
+	<div class="slide-box" id="slideContent">
+        <volist name="ads" id="data">
+		<div class="slide" id="bgstylec" style="background:url({$data['img']|get_cover='path'}) no-repeat center 0;">
+
+		</div>
+        </volist>
+	</div>
+	<a class="next" href="javascript:;" stat="next1002"><img src="__IMG__/icon-bannernext.png"/></a>
+	<div class="item">
+		<a class="cur" stat="item1001" href="javascript:;"></a><a href="javascript:;" stat="item1002"></a><a href="javascript:;" stat="item1003"></a>
+	</div>
 </div>
+
+
+
 <div class="wrap">
 	<div class="main-item mt20 clearfix">
-	<h1 class="active-tit"><i>创客活动</i></h1>
-	<ul class="active-list">
-		<li>
-			<a href="#"><img src="__IMG__/main-img1.png" ></a>
-			<p>
-				<span>简约 | </span><em>手工陶瓷钟</em>
-				<i>创客汇满带的是一种对生活的情怀</i>
-			</p>
-		</li>
-		<li>
-			<a href="#"><img src="__IMG__/main-img2.png" ></a>
-			<p>
-				<span>厨具 | </span><em>擀面杖的故事</em>
-				<i>创客汇满带的是一种对生活的情怀</i>
-			</p>
-		</li>
-		<li>
-			<a href="#"><img src="__IMG__/main-img3.png" ></a>
-			<p>
-				<span>越野 | </span><em>一山一水一背包</em>
-				<i>创客汇满带的是一种对生活的情怀</i> 
-			</p>
-		</li>
-	</ul>
-	<div class="clear"></div>
-	<div class="active-more">
-		<a href="#">查看更多</a>
-	</div>
+		<h1 class="active-tit"> <i>创客活动</i>
+		</h1>
+		<ul class="active-list">
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img1.png" ></a>
+				<p>
+					<span>简约 |</span> <em>手工陶瓷钟</em> <i>创客汇满带的是一种对生活的情怀</i>
+				</p>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img2.png" ></a>
+				<p>
+					<span>厨具 |</span> <em>擀面杖的故事</em>
+					<i>创客汇满带的是一种对生活的情怀</i>
+				</p>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img3.png" ></a>
+				<p>
+					<span>越野 |</span>
+					<em>一山一水一背包</em>
+					<i>创客汇满带的是一种对生活的情怀</i>
+				</p>
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div class="active-more">
+			<a href="#">查看更多</a>
+		</div>
 	</div>
 </div>
 <div class="wrap">
-<div class="main-item main-item2 mt20 clearfix">
-	<h1 class="active-tit active-tit2"><i>1566公益基金</i></h1>
+	<div class="main-item main-item2 mt20 clearfix">
+		<h1 class="active-tit active-tit2">
+			<i>1566公益基金</i>
+		</h1>
 
-	<ul class="active-list active-list2">
-		<li><a href="#"><img src="__IMG__/main-img4.png" ></a>
-		<h6>{$Think.lang._ABOUT1566_}</h6>
-		</li>
-		<li><a href="#"><img src="__IMG__/main-img5.png" ></a>
-		<h6>申请基金</h6>
-		</li>
-		<li><a href="#"><img src="__IMG__/main-img6.png" ></a>
-		<h6>公益捐赠</h6>
-		</li>
-		<li class="actionlist-tit">
-			资助的项目
-		</li>
-		<li><a href="#"><img src="__IMG__/main-img7.png" ></a>
-		</li>
-		<li><a href="#"><img src="__IMG__/main-img8.png" ></a>
-		</li>
-		<li><a href="#"><img src="__IMG__/main-img9.png" ></a>
-		</li>
+		<ul class="active-list active-list2">
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img4.png" ></a>
+				<h6>关于1566</h6>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img5.png" ></a>
+				<h6 id="sqjj-btn">申请基金</h6>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img6.png" ></a>
+				<h6>公益捐赠</h6>
+			</li>
+			<li class="actionlist-tit">资助的项目</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img7.png" ></a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img8.png" ></a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="__IMG__/main-img9.png" ></a>
+			</li>
 
-	</ul>
+		</ul>
 
-	<div class="clear"></div>
-	<div class="active-more active-more2">
-		<a href="#">查看更多</a>
+		<div class="clear"></div>
+		<div class="active-more active-more2">
+			<a href="#">查看更多</a>
+		</div>
 	</div>
-</div>
 </div>
 
 <div class="wrap">
-<div class="main-item main-item3 mt20 clearfix">
-	<h1 class="active-tit active-tit3"><i>各界关注</i></h1>
+	<div class="main-item main-item3 mt20 clearfix">
+		<h1 class="active-tit active-tit3">
+			<i>各界关注</i>
+		</h1>
 
-	<ul class="active-list active-list3">
-		<li><a href="detialgz.php"><img src="__IMG__/main-img10.png" ></a>
-		<h6>{$Think.lang._ABOUT1566_}</h6>
-		</li>
-		<li><a href="detialgz.php"><img src="__IMG__/main-img11.png" ></a>
-		<h6>申请基金</h6>
-		</li>
-		<li><a href="detialgz.php"><img src="__IMG__/main-img12.png" ></a>
-		<h6>申请基金</h6>
-		</li>
+		<ul class="active-list active-list3">
+			<li>
+				<a href="detialgz.php">
+					<img src="__IMG__/main-img10.png" ></a>
+				<h6>关于1566</h6>
+			</li>
+			<li>
+				<a href="detialgz.php">
+					<img src="__IMG__/main-img11.png" ></a>
+				<h6>申请基金</h6>
+			</li>
+			<li>
+				<a href="detialgz.php">
+					<img src="__IMG__/main-img12.png" ></a>
+				<h6>申请基金</h6>
+			</li>
+
+		</ul>
+
+		<div class="clear"></div>
+		<div class="active-more active-more3">
+			<a href="#">查看更多</a>
+		</div>
+	</div>
+</div>
+
+<!-- 弹窗 start -->
+<div class="poppubbg"></div>
+
+<div class="poppubBox" style="height:600px;display:none">
+	<div class="pubconbox">
+
+		<div class="pub-gycon">
+			<h3 class="pub-tit">公益捐赠</h3>
+			<div class="pubcon-info">
+			<br>
+				 男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+有的人摔倒了，就再也没有起来。<br>
+有的人从一开始就看到了最后的终点<br>
+我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。<br>
+<br>
+       男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+
+<br><br>
+电话:123456578<br>
+地址：有的人摔倒了就再也没有起来
+			</div>
+		</div>
+
+		<div class="pub-gycon" style="display:none">
+			<h3 class="pub-tit">1566 创客公益基金的故事</h3>
+			<img src="__IMG__/img5.png" height="194" width="618">
+			<br>
+			<br>
+			男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+			<div class="clear"></div>
+			<div class="pub-btn">申请基金</div>
+		</div>
 		
+		<div class="pub-gycon" style="display:none">
+			<h3 class="pub-tit">申请流程与事项</h3>
+			<div class="pubcon-info">
+			<br>
+				 男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+有的人摔倒了，就再也没有起来。<br>
+有的人从一开始就看到了最后的终点<br>
+我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。<br>
+<br>
+       男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
 
-	</ul>
+<br><br>
+电话:123456578<br>
+地址：有的人摔倒了就再也没有起来
+			</div>
+		</div>
 
-	<div class="clear"></div>
-	<div class="active-more active-more3">
-		<a href="{:U('Attentions/index')}">查看更多</a>
+
+		<div class="pop-close"></div>
+
+		<div class="pop-pre"></div>
+		<div class="pop-next"></div>
 	</div>
-</div>
 </div>
 <include file="Public/footer" />
+<script type="text/javascript">
+var J_poppubBox=$('.poppubBox');
+var J_poppubbg=$('.poppubbg');
+	//弹出
+	$('#sqjj-btn').on('click',function(){
+		$('.poppubbg,.poppubBox').show();
+		var _WinHeight=$(window).height();
+		if(_WinHeight>600){
+			var J_popHeight=(_WinHeight-600)/2;
+			J_poppubBox.css({
+				top: J_popHeight+'px',
+				
+			});
+		}else{
+			J_poppubBox.css({
+				top: 0+'px'
+			});
+		}
+		
+	});
+	$('.pop-close').on('click',function(){
+		J_poppubbg.hide();
+		J_poppubBox.hide();
+	});
+	// 切换
+	var J_index=0;
+	var J_popPre=$('.pop-pre');
+	var J_popNext=$('.pop-next');
+	var J_pubGycon=$('.pub-gycon');
+	J_popNext.hide();
+
+	J_popPre.on('click',function(){
+
+		J_index=J_index+1;
+		if(J_index>0){
+			J_popNext.show();
+		}
+		J_pubGycon.hide();
+		J_pubGycon.eq(J_index).show('100');
+		if(J_index==(J_pubGycon.length-1)){
+			J_popPre.hide();
+		}
+	});
+	J_popNext.on('click',function(){
+
+		J_index=J_index-1;
+		if(J_index<=0){
+			J_popPre.show();
+		}
+		J_pubGycon.hide();
+		J_pubGycon.eq(J_index).show('100');
+		if(J_index==0){
+			J_popNext.hide();
+		}
+	});
+
+</script>
+<script src="js/banner.js"></script>
 </body>
 </html>

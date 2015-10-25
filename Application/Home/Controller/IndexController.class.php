@@ -18,15 +18,13 @@ class IndexController extends HomeController {
 
 	//系统首页
     public function index(){
-
-        $category = D('Category')->getTree();
-        $lists    = D('Document')->lists(null);
-
-        $this->assign('category',$category);//栏目
-        $this->assign('lists',$lists);//列表
-        $this->assign('page',D('Document')->page);//分页
-
-                 
+	    //获取广告
+	    $_GET['category'] = 42;
+	    $where['ad_type'] = 1;
+	    $field = 'id,ch_title as title,ch_img as img';
+	    $table = 'DocumentAds';
+	    $ads = $this->pro_lists($table,$where,$field);
+	    $this->assign('ads',$ads);//列表
         $this->display();
     }
 
