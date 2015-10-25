@@ -81,3 +81,15 @@ function get_nav_on($url){
 
 	return $on;
 }
+
+/**
+ * 实现面包屑导航
+ * @param $url
+ * @return string
+ */
+function pro_wrap($key,$num,$str){
+	if($key%$num==$num-1)
+		return $str;
+	else
+		return '';
+}

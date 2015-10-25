@@ -19,7 +19,7 @@
 	<h4 class="detialck-tit">相关的项目</h4>
 	<ul class="gybox clearfix">
         <volist name="projects" id="data">
-			<li>
+			<li {$key|pro_wrap=###,3,'class="gyli"'}>
 				<img src="{$data['cover_url']|get_cover='path'}">
 				<span class='gy-tit'>{$data.title}</span>
 				<div class="gy-info">
