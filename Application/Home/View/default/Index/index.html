@@ -4,7 +4,7 @@
 	<div class="slide-box" id="slideContent">
         <volist name="ads" id="data">
 		<div class="slide" id="bgstylec" style="background:url({$data['img']|get_cover='path'}) no-repeat center 0;">
-
+            {$data['title']}
 		</div>
         </volist>
 	</div>
@@ -21,112 +21,83 @@
 		<h1 class="active-tit"> <i>创客活动</i>
 		</h1>
 		<ul class="active-list">
+            <volist name="activitys" id="data">
 			<li>
-				<a href="#">
-					<img src="__IMG__/main-img1.png" ></a>
+				<a href="{:U('Activity/detail?id='.$data['id'])}">
+					<img src="{$data['cover_id']|get_cover='path'}" ></a>
 				<p>
-					<span>简约 |</span> <em>手工陶瓷钟</em> <i>创客汇满带的是一种对生活的情怀</i>
-				</p>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img2.png" ></a>
-				<p>
-					<span>厨具 |</span> <em>擀面杖的故事</em>
-					<i>创客汇满带的是一种对生活的情怀</i>
-				</p>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img3.png" ></a>
-				<p>
-					<span>越野 |</span>
-					<em>一山一水一背包</em>
-					<i>创客汇满带的是一种对生活的情怀</i>
-				</p>
-			</li>
-		</ul>
-		<div class="clear"></div>
-		<div class="active-more">
-			<a href="#">查看更多</a>
-		</div>
-	</div>
+                    <!-- <span>简约 |</span>--> <em> {$data['title']}</em> <i>{$data['content']}</i>
+                </p>
+            </li>
+            </volist>
+        </ul>
+        <div class="clear"></div>
+        <div class="active-more">
+            <a href="{:U('Activity/index')}">查看更多</a>
+        </div>
+    </div>
 </div>
 <div class="wrap">
-	<div class="main-item main-item2 mt20 clearfix">
-		<h1 class="active-tit active-tit2">
-			<i>1566公益基金</i>
-		</h1>
+    <div class="main-item main-item2 mt20 clearfix">
+        <h1 class="active-tit active-tit2">
+            <i>1566公益基金</i>
+        </h1>
 
-		<ul class="active-list active-list2">
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img4.png" ></a>
-				<h6>关于1566</h6>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img5.png" ></a>
-				<h6 id="sqjj-btn">申请基金</h6>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img6.png" ></a>
-				<h6>公益捐赠</h6>
-			</li>
-			<li class="actionlist-tit">资助的项目</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img7.png" ></a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img8.png" ></a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="__IMG__/main-img9.png" ></a>
-			</li>
+        <ul class="active-list active-list2">
+            <li>
+                <a href="#">
+                    <img src="__IMG__/main-img4.png" ></a>
+                <h6>关于1566</h6>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="__IMG__/main-img5.png" ></a>
+                <h6 id="sqjj-btn">申请基金</h6>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="__IMG__/main-img6.png" ></a>
+                <h6>公益捐赠</h6>
+            </li>
+            <li class="actionlist-tit">资助的项目</li>
+            <volist name="projects" id="data">
+            <li>
+                <a href="{:U('Project/detail?id='.$data['id'])}">
+                    <img src="{$data['cover_url']|get_cover='path'}" ></a>
+            </li>
+            </volist>
 
-		</ul>
 
-		<div class="clear"></div>
-		<div class="active-more active-more2">
-			<a href="#">查看更多</a>
-		</div>
-	</div>
+        </ul>
+
+        <div class="clear"></div>
+        <div class="active-more active-more2">
+            <a href="#">查看更多</a>
+        </div>
+    </div>
 </div>
 
 <div class="wrap">
-	<div class="main-item main-item3 mt20 clearfix">
-		<h1 class="active-tit active-tit3">
-			<i>各界关注</i>
-		</h1>
+    <div class="main-item main-item3 mt20 clearfix">
+        <h1 class="active-tit active-tit3">
+            <i>各界关注</i>
+        </h1>
 
-		<ul class="active-list active-list3">
-			<li>
-				<a href="detialgz.php">
-					<img src="__IMG__/main-img10.png" ></a>
-				<h6>关于1566</h6>
-			</li>
-			<li>
-				<a href="detialgz.php">
-					<img src="__IMG__/main-img11.png" ></a>
-				<h6>申请基金</h6>
-			</li>
-			<li>
-				<a href="detialgz.php">
-					<img src="__IMG__/main-img12.png" ></a>
-				<h6>申请基金</h6>
-			</li>
+        <ul class="active-list active-list3">
+            <volist name="attentions" id="data">
+            <li>
+                <a href="{:U('Attentions/detail?id='.$data['id'])}">
+                    <img src="{$data['cover_id']|get_cover='path'}" ></a>
+                <h6>{$data.title}</h6>
+            </li>
+            </volist>
+        </ul>
 
-		</ul>
-
-		<div class="clear"></div>
-		<div class="active-more active-more3">
-			<a href="#">查看更多</a>
-		</div>
-	</div>
+        <div class="clear"></div>
+        <div class="active-more active-more3">
+            <a href="#">查看更多</a>
+        </div>
+    </div>
 </div>
 
 <!-- 弹窗 start -->

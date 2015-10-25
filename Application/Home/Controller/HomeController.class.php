@@ -39,6 +39,17 @@ class HomeController extends Controller {
 	}
 
 
+	/* 首页获取数据 */
+	public function index_lists($table,$where,$field='*',$order='id desc',$limit = 3){
+		/* 获取当前分类列表 */
+		$list = M($table)->table(M($table)->getTableName().' a') ->join('left join xh_document b ON b.id = a.id')->where($where)->field($field)->order($order)->limit($limit)->select();;
+		//echo M($table)->getLastSql();exit;
+		if(false === $list){
+			$this->error('获取列表数据失败！');
+		}
+		return $list;
+	}
+
 	/* 文档模型列表页 */
 	public function pro_lists($table,$where,$field='*',$p = 1){
 		/* 分类信息 */
