@@ -32,6 +32,12 @@ class BbsController extends HomeController {
 	    $makers = $this->index_lists($table,$where,$field,$order,8);
 	    $this->assign('makers',$makers);
 
+	    //获取地区分类数量列表
+	    $arealist = M('documentMaker')->field('area,count(*) as num')->group('area')->select();
+	    //print_r($arealist);
+	    $this->assign('arealist',$arealist);
+	    $this->assign('area_name',$this->area_name);
+
 	    if($_GET['p_status'])
 		    $where['p_status'] = $_GET['p_status'];
 	    $field = 'id,ch_title as title,ch_content as content,cover_url';

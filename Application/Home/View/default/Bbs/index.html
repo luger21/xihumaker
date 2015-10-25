@@ -26,12 +26,12 @@
 						</p>
 						<span class="cur_province"> <b>全部创客</b>
 						</span>
-
+                        <volist name="arealist" id="data">
 						<span>
-                            <b>北京市</b>
-                            <i>(2)</i>
+                            <b>{$area_name[$data[area]]}</b>
+                            <i>({$data.num})</i>
 						</span>
-
+                        </volist>
 
 					</div>
 					<div class="hide">
