@@ -33,6 +33,15 @@ class ProjectController extends HomeController {
         $this->display();
     }
 
+	public function detail()
+	{
+		$info = $this->article_detail($_GET['id']);
+		$info['title'] = $info['ch_title'];
+		$info['content'] = $info['ch_content'];
+		$this->assign('info', $info);
+		$this->display();
+	}
+
 	//翻页api接口
 	public function api(){
 		if($_GET['p_status'])

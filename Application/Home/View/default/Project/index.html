@@ -28,7 +28,7 @@
 		</ul>
 		<ul class="gybox clearfix">
             <volist name="list" id="data">
-
+                <a href="{:U('Project/detail?id='.$data['id'])}">
 			<li>
 				<img src="{$data['cover_url']|get_cover='path'}">
 				<span class='gy-tit'>{$data.title}</span>
@@ -37,6 +37,7 @@
 					<span class='gy-infor icon-gy{$data.p_status}'>{$p_name[$data[p_status]]}</span>
 				</div>
 			</li>
+                </a>
             </volist>
 
 
