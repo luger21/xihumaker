@@ -15,6 +15,13 @@ use Think\Controller;
  * 为防止多分组Controller名称冲突，公共Controller名称统一使用分组名称
  */
 class HomeController extends Controller {
+	public $p_name = array(
+		1=>'进行中',
+		2=>'组团队',
+		3=>'组队中',
+		4=>'已商业',
+		5=>'已结束',
+	);
 
 	/* 空操作，用于输出404页面 */
 	public function _empty(){

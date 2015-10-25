@@ -1,46 +1,87 @@
 <include file="Public/header" />
 <div class="bigbg">
 	<div class="wrap textTop ">
-		<img src="__IMG__/active-text.png" height="217" width="543">
-	</div>
+		<img src="images/active-text.png" height="217" width="543"></div>
 	<div class="clear"></div>
 	<div class="wrap">
-	<div class="activebox">
-		<div class="activebox-tit"></div>
-		<ul class="activeList ">
-            <volist name="list" id="data">
-			<li>
-				<div class="act-listl">
-					<div class="act-icon act-icon{$a|rand=4} fl"></div>
-					<div class="act-tit"><em>{$data.create_time|date='Y年',###}<br>{$data.create_time|date='m月d日',###}</em></div>
-				</div>
-				<div class="act-listr fr">
-					<img src="{$data['cover_id']|get_cover='path'}" height="200" width="200">
-					<div class="act-listrtext">
-						<h5>{$data.title}</h5>
-						<p class="act-listCon">
-                            {$data.description}
-						</p>
-						<a href="{:U('Activity/detail?id='.$data['id'])}">阅读全文</a>
-					</div>
-				</div>
-			</li>
-            </volist>
-		</ul>
+		<div class="activebox">
+			<div class="activebox-tit"></div>
+			<ul class="activeList" id="activeList" data-curpage='1' data-haspage="true">
+				<volist name="list" id="data">
+					<li>
+						<div class="act-listl">
+							<div class="act-icon act-icon{$a|rand=4} fl"></div>
+							<div class="act-tit"><em>{$data.create_time|date='Y年',###}<br>{$data.create_time|date='m月d日',###}</em></div>
+						</div>
+						<div class="act-listr fr">
+							<img src="{$data['cover_id']|get_cover='path'}" height="200" width="200">
+							<div class="act-listrtext">
+								<h5>{$data.title}</h5>
+								<p class="act-listCon">
+									{$data.description}
+								</p>
+								<a href="{:U('Activity/detail?id='.$data['id'])}">阅读全文</a>
+							</div>
+						</div>
+					</li>
+				</volist>
+			</ul>
 
-		<div class="act-listbot">
-			
+			<div class="act-listbot"></div>
+
+			<!-- <div class="list-more">向下滚动以加载更多</div> -->
 		</div>
-		
-		<div class="list-more">向下滚动以加载更多</div>
 	</div>
-</div>
 
 </div>
+<div class="pubBox" id="pub-btn"></div>
+<div class="poppubbg"></div>
+<div class="poppubBox" style="display:none">
+	<div class="pubconbox">
+		<h3>发布我的一个项目</h3>
+		<div class="pubcon-info">
+			男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢.男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，
+有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+		</div>
+		<div class="pub-contact">
+			<div class="pub-conleft">
+				<div class="pub-titicon">0571-8271234</div>
+				<div class="pub-qqicon">10000000</div>
+			</div>
+			<div class="pub-erweima">
+				<img src="__IMG__/erweima.png" height="118" width="187"></div>
+		</div>
+		<div class="pop-close"></div>
+	</div>
 
-<div class="pubBox">
-	
 </div>
 <include file="Public/footer" />
+<script type="text/javascript">
+var J_poppubBox=$('.poppubBox');
+var J_poppubbg=$('.poppubbg');
+	//弹出
+	$('#pub-btn').on('click',function(){
+		$('.poppubbg,.poppubBox').show();
+		var _WinHeight=$(window).height();
+		if(_WinHeight>600){
+			var J_popHeight=(_WinHeight-600)/2;
+			J_poppubBox.css({
+				top: J_popHeight+'px',
+				
+			});
+		}else{
+			J_poppubBox.css({
+				top: 0+'px'
+			});
+		}
+		
+	});
+	$('.pop-close').on('click',function(){
+		J_poppubbg.hide();
+		J_poppubBox.hide();
+	});
+
+</script>
 </body>
 </html>

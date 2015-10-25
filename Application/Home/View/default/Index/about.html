@@ -11,25 +11,129 @@
 	</div>
 
 	<div class="about-info">
-		
 		西湖创客汇就是杭州地区的创客空间，主旨为 青年 • 创新 • 科技 ： 创客们视青春为珍宝，爱折腾，绝不埋没生命的能量；热爱生活，能敏锐触碰生活的质感和创新的种子。西湖创客汇鼓励没有任何功利心的创新，我们相信，惟其无用，却有机会真正拓宽人类的道路。
 西湖创客汇的使命是汇聚浙江地区的创客，友爱互助，以科技力量为社会公益做出一定贡献。
-	<br><br>
-通过发扬创客精神，既增进年轻人学习技术的兴趣，更为本地科技行业的发展提供文化驱动力，推进社会创造力。
+		<br>
+		<br>
+		通过发扬创客精神，既增进年轻人学习技术的兴趣，更为本地科技行业的发展提供文化驱动力，推进社会创造力。
 西湖创客汇的使命是汇聚浙江地区的创客，友爱互助，以科技力量为社会公益做出一定贡献。通过发扬创客精神，既增进年轻人学习技术的兴趣，更为本地科技行业的发展提供文化驱动力，推进社会创造力。
-	
-<img src="__IMG__/about_img.jpg">
+		<img src="__IMG__/about_img.jpg"></div>
+	<div class="about-tit2">
+		<h3>我们的风采</h3>
+		<p>西湖创客汇的使命是汇聚浙江地区的创客</p>
+
 	</div>
-<div class="about-tit2">
-	<h3>我们的风采</h3>
-	<p>西湖创客汇的使命是汇聚浙江地区的创客</p>
-</div>
 
 </div>
 <div class="about-fc">
-	
-</div>
+	<div class="wrap">
+		<div class="mainpro">
+			<div class="pro_pre"></div>
+			<div class="pro_list">
+				<ul>
+
+					
+					<li>
+						<p>
+							<img src="__IMG__/img6.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img6.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img6.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img6.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+					<li>
+						<p>
+							<img src="__IMG__/img7.jpg"/>
+						</p>
+					</li>
+
+					</ul>
+				</div>
+				<div class="pro_next"></div>
+			</div>
+		</div>
+	</div>
 
 <include file="Public/footer" />
+	<script type="text/javascript">
+	$(function() {
+	var sWidth_pro = $(".pro_list").width(); 
+	var len_pro = Math.ceil($(".pro_list li").length/3); 
+	var index_pro= 0;
+	var picTimer_pro;
+	$(".pro_list ul").css("width",sWidth_pro * (len_pro));
+	$(".pro_pre").click(function() {
+		index_pro -= 1;
+		if(index_pro == -1) {index_pro = len_pro - 1;}
+		showPics_pro(index_pro);
+	});
+
+	$(".pro_next").click(function() {
+		index_pro += 1;
+		if(index_pro == len_pro) {index_pro = 0;}
+		showPics_pro(index_pro);
+	});
+	$(".pro_list").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics_pro(index_pro);
+			index_pro++;
+			if(index_pro == len_pro) {index_pro = 0;}
+		},4000); 
+	}).trigger("mouseleave");
+	function showPics_pro(index) { 
+		var nowLeft = -index_pro*sWidth_pro; 
+		$(".pro_list ul").stop(true,false).animate({"left":nowLeft},300); 
+	}
+});
+</script>
 </body>
 </html>

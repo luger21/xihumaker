@@ -21,13 +21,6 @@ class ProjectController extends HomeController {
 
 	private $table = 'DocumentProject';
 
-	private $p_name = array(
-			1=>'进行中',
-			2=>'组团队',
-			3=>'组队中',
-			4=>'已商业',
-			5=>'已结束',
-		);
 
 	//系统首页
     public function index(){
