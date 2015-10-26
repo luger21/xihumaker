@@ -29,7 +29,7 @@
 	</div>
 	<div class="clear"></div>
 	<div class="re-btn">
-		<img src="__IMG__/re_add.png">
+		<img src="__IMG__/re_add.png" id="sqjj-btn">
 	</div>
 	<div class="re-tit clearfix">
 		免费场地
@@ -80,6 +80,122 @@
 	</div>
 </div>
 </div>
+<!-- 弹窗 start -->
+<div class="poppubbg"></div>
+
+<div class="poppubBox" style="height:600px;display:none">
+	<div class="pubconbox">
+
+		<div class="pub-gycon">
+			<h3 class="pub-tit">公益捐赠</h3>
+			<div class="pubcon-info">
+			<br>
+				 男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+有的人摔倒了，就再也没有起来。<br>
+有的人从一开始就看到了最后的终点<br>
+我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。<br>
+<br>
+       男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+
+<br><br>
+电话:123456578<br>
+地址：有的人摔倒了就再也没有起来
+			</div>
+		</div>
+
+		<div class="pub-gycon" style="display:none">
+			<h3 class="pub-tit">1566 创客公益基金的故事</h3>
+			<img src="__IMG__/img5.png" height="194" width="618">
+			<br>
+			<br>
+			男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+			<div class="clear"></div>
+			<div class="pub-btn">申请基金</div>
+		</div>
+		
+		<div class="pub-gycon" style="display:none">
+			<h3 class="pub-tit">申请流程与事项</h3>
+			<div class="pubcon-info">
+			<br>
+				 男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+       有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+有的人摔倒了，就再也没有起来。<br>
+有的人从一开始就看到了最后的终点<br>
+我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。<br>
+<br>
+       男主奔跑切拿出吉他切男主奔跑切举起谱子架切坐下弹吉他切男主奔跑切拿笔改曲。（快结束的时候配上旁白：其实每个人都在奔跑，有的人跑的很慢，有的人跑的很快，有的人忙着欣赏路边风景，有的人从一开始就看到了最后的终点，我们都在碰撞，磕绊，可是有的人摔倒了，就再也没有起来。
+
+<br><br>
+电话:123456578<br>
+地址：有的人摔倒了就再也没有起来
+			</div>
+		</div>
+
+
+		<div class="pop-close"></div>
+
+		<div class="pop-pre"></div>
+		<div class="pop-next"></div>
+	</div>
+</div>
 <include file="Public/footer" />
+<script type="text/javascript">
+	var J_poppubBox=$('.poppubBox');
+var J_poppubbg=$('.poppubbg');
+	//弹出
+	$('#sqjj-btn').on('click',function(){
+		$('.poppubbg,.poppubBox').show();
+		var _WinHeight=$(window).height();
+		if(_WinHeight>600){
+			var J_popHeight=(_WinHeight-600)/2;
+			J_poppubBox.css({
+				top: J_popHeight+'px',
+				
+			});
+		}else{
+			J_poppubBox.css({
+				top: 0+'px'
+			});
+		}
+		
+	});
+	$('.pop-close').on('click',function(){
+		J_poppubbg.hide();
+		J_poppubBox.hide();
+	});
+	// 切换
+	var J_index=0;
+	var J_popPre=$('.pop-pre');
+	var J_popNext=$('.pop-next');
+	var J_pubGycon=$('.pub-gycon');
+	J_popNext.hide();
+
+	J_popPre.on('click',function(){
+
+		J_index=J_index+1;
+		if(J_index>0){
+			J_popNext.show();
+		}
+		J_pubGycon.hide();
+		J_pubGycon.eq(J_index).show('100');
+		if(J_index==(J_pubGycon.length-1)){
+			J_popPre.hide();
+		}
+	});
+	J_popNext.on('click',function(){
+
+		J_index=J_index-1;
+		if(J_index<=0){
+			J_popPre.show();
+		}
+		J_pubGycon.hide();
+		J_pubGycon.eq(J_index).show('100');
+		if(J_index==0){
+			J_popNext.hide();
+		}
+	});
+</script>
 </body>
 </html>
