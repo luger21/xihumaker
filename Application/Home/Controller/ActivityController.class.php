@@ -46,7 +46,7 @@ class ActivityController extends HomeController {
 		$list = $this->lists($p);
 		foreach($list as $key=>$value){
 			$new_list[$key]['id'] = $value['id'];
-			$new_list[$key]['act-icon'] = 'act-icon'.rand(0,4);
+			$new_list[$key]['act_icon'] = 'act-icon'.rand(0,4);
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
 			if(empty($new_list[$key]['cover_url']))
 				$new_list[$key]['cover_url'] = __ROOT__.'/Public/Home/images/img1.png';
