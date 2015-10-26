@@ -53,7 +53,14 @@ class ActivityController extends HomeController {
 			$new_list[$key]['create_time'] = $value['create_time'];
 		}
 		//print_r($new_list);
-        echo json_encode($new_list);
+
+		$nextlist = $this->lists($p+1);
+		if(count($nextlist)>0)
+			$data['haspage'] = 1;
+		else
+			$data['haspage'] = 0;
+		$data['list'] = $new_list;
+        echo json_encode($data);
 	}
 
 }
