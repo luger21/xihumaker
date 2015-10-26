@@ -4,14 +4,14 @@
 		<div class="bbsbox clearfix">
 			<h5>热门创客</h5>
 			<ul class="bbslist clearfix">
-                <volist name="makers" id="data">
-				<li>
-					<a href="{:U('Bbs/detail?id='.$data['id'])}">
-						<img src="{$data['cover_id']|get_cover='path'}" height="190" width="290">
-						<span>{$data.title}</span>
-					</a>
-				</li>
-                </volist>
+				<volist name="makers" id="data">
+					<li {$key|pro_wrap=###,4,'class="bbsItem"'}>
+						<a href="{:U('Bbs/detail?id='.$data['id'])}">
+							<img src="{$data['cover_id']|get_cover='path'}" height="190" width="290">
+							<span>{$data.title}</span>
+						</a>
+					</li>
+				</volist>
 			</ul>
 
 			<div class="ckmore"> <em>查看更多</em>
@@ -22,34 +22,219 @@
 			<div class="stretch_bg">
 				<div class="strech">
 					<div class="show">
-						<p id="arrows" class=""> <i class="arrows_down "></i>
+						<p id="arrows" class="arrows_up"> <i class="arrows_down "></i>
 						</p>
 						<span class="cur_province"> <b>全部创客</b>
 						</span>
-                        <volist name="arealist" id="data">
-						<span>
-                            <b>{$area_name[$data[area]]}</b>
-                            <i>({$data.num})</i>
+						<span> <b>北京市</b> <i>(2)</i>
 						</span>
-                        </volist>
+						<span>
+							<b>天津市</b>
+							<i>(2)</i>
+						</span>
+						<span>
+							<b>上海市</b>
+							<i>(3)</i>
+						</span>
+						<span>
+							<b>重庆市</b>
+							<i>(2)</i>
+						</span>
+						<span>
+							<b>河北省</b>
+							<i>(3)</i>
+						</span>
+						<span>
+							<b>山西省</b>
+							<i>(3)</i>
+						</span>
+						
 
 					</div>
 					<div class="hide">
-
+					<span>
+							<b>辽宁省</b>
+							<i>(4)</i>
+						</span>
+						<span>
+							<b>黑龙江省</b>
+							<i>(1)</i>
+						</span>
+						<span>
+							<b>江苏省</b>
+							<i>(8)</i>
+						</span>
 						<span >
 							<b>浙江省</b>
 							<i>(12)</i>
 						</span>
-
+						<span >
+							<b>安徽省</b>
+							<i>(1)</i>
+						</span>
+						<span >
+							<b>福建省</b>
+							<i>(3)</i>
+						</span>
+						<span >
+							<b>江西省</b>
+							<i>(1)</i>
+						</span>
+						<span >
+							<b>山东省</b>
+							<i>(3)</i>
+						</span>
+						<span >
+							<b>河南省</b>
+							<i>(5)</i>
+						</span>
+						<span >
+							<b>湖北省</b>
+							<i>(3)</i>
+						</span>
+						<span >
+							<b>湖南省</b>
+							<i>(1)</i>
+						</span>
+						<span >
+							<b>广东省</b>
+							<i>(21)</i>
+						</span>
+						<span >
+							<b>重庆市</b>
+							<i>(2)</i>
+						</span>
+						<span >
+							<b>四川省</b>
+							<i>(6)</i>
+						</span>
+						<span >
+							<b>贵州省</b>
+							<i>(1)</i>
+						</span>
+						<span >
+							<b>云南省</b>
+							<i>(1)</i>
+						</span>
+						<span >
+							<b>陕西省</b>
+							<i>(4)</i>
+						</span>
+						<span >
+							<b>广西壮族自治区</b>
+							<i>(1)</i>
+						</span>
 					</div>
 
 				</div>
 			</div>
-			<!--stretch end-->
+			
+		</div>
 
-			<div class="list-more list-more2">向下滚动以加载更多</div>
+
+
+		<div class="bbsbox allck_box clearfix">
+			<h5>江西创客空间</h5>
+			<ul class="gybox clearfix">
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li class="gyli">
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+		</ul>
+
+
+		<h5>浙江创客空间</h5>
+			<ul class="gybox clearfix">
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li class="gyli">
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+		</ul>
+
+
+
+		<h5>北京创客空间</h5>
+			<ul class="gybox clearfix">
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li>
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+			<li class="gyli">
+				<img src="__IMG__/img1.jpg">
+				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
+				<div class="gy-info">
+					我们会陆续添加线上&线下活动，包括产品
+试用、社区福利、微活动等
+				</div>
+			</li>
+		</ul>
 		</div>
 	</div>
 </div>
-<include file="Public/footer" /></body>
+<?php include 'footer.php' ?>
+<script type="text/javascript">
+	$('.strech p').click(function(){
+			
+			$('.strech p').toggleClass('');
+			$(this).toggleClass('arrows_up');
+			$('.hide').slideToggle(200);
+			
+			makercookie = makercookie >0 ? -1 : 1;
+			setCookie('usermaker', makercookie, 2592000);
+		});
+
+</script>
+</body>
 </html>

@@ -1,0 +1,55 @@
+<include file="Public/header" />
+<div class="bigbg">
+	<div class="wrap ">
+		<div class="bbsbox clearfix">
+			<h5>热门创客</h5>
+			<ul class="bbslist clearfix">
+                <volist name="makers" id="data">
+				<li>
+					<a href="{:U('Bbs/detail?id='.$data['id'])}">
+						<img src="{$data['cover_id']|get_cover='path'}" height="190" width="290">
+						<span>{$data.title}</span>
+					</a>
+				</li>
+                </volist>
+			</ul>
+
+			<div class="ckmore"> <em>查看更多</em>
+			</div>
+
+			<div class="clear"></div>
+			<!--stretch start-->
+			<div class="stretch_bg">
+				<div class="strech">
+					<div class="show">
+						<p id="arrows" class=""> <i class="arrows_down "></i>
+						</p>
+						<span class="cur_province"> <b>全部创客</b>
+						</span>
+                        <volist name="arealist" id="data">
+						<span>
+                            <b>{$area_name[$data[area]]}</b>
+                            <i>({$data.num})</i>
+						</span>
+                        </volist>
+
+					</div>
+					<div class="hide">
+
+						<span >
+							<b>浙江省</b>
+							<i>(12)</i>
+						</span>
+
+					</div>
+
+				</div>
+			</div>
+			<!--stretch end-->
+
+			<div class="list-more list-more2">向下滚动以加载更多</div>
+		</div>
+	</div>
+</div>
+<include file="Public/footer" /></body>
+</html>
