@@ -38,8 +38,8 @@ class BbsController extends HomeController {
 	    $this->assign('arealist',$arealist);
 	    $this->assign('area_name',$this->area_name);
 
-	    if($_GET['p_status'])
-		    $where['p_status'] = $_GET['p_status'];
+	    if($_GET['area'])
+		    $where['area'] = $_GET['area'];
 	    $field = 'id,ch_title as title,ch_content as content,cover_url';
 	    $list = $this->pro_lists($this->table,$where,$field);
 	    $this->assign('list',$list);//列表
@@ -65,8 +65,6 @@ class BbsController extends HomeController {
 
 	//翻页api接口
 	public function api(){
-		if($_GET['p_status'])
-			$where['p_status'] = $_GET['p_status'];
 		if($_GET['area'])
 			$where['area'] = $_GET['area'];
 		$p = $_GET['p']?$_GET['p']:0;
