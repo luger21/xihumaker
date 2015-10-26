@@ -48,9 +48,12 @@ class ActivityController extends HomeController {
 			$new_list[$key]['id'] = $value['id'];
 			$new_list[$key]['act-icon'] = 'act-icon'.rand(0,4);
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
+			if(empty($new_list[$key]['cover_url']))
+				$new_list[$key]['cover_url'] = __ROOT__.'/Public/Home/images/img1.png';
 			$new_list[$key]['title'] = $value['title'];
 			$new_list[$key]['description'] = $value['description'];
-			$new_list[$key]['create_time'] = $value['create_time'];
+			$new_list[$key]['year'] = date('Y年',$value['create_time']);
+			$new_list[$key]['month'] = date('m月d日',$value['create_time']);
 		}
 		//print_r($new_list);
 
