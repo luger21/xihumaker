@@ -1,0 +1,37 @@
+<include file="Public/header" />
+<div class="bigbg">
+	<div class="wrap">
+		<div class="loaction">
+			<a href="{:U('Index/index')}">首页</a><em>/</em><a href="{:U('Project/pro1566')}">1566公益基金资助项目</a>
+			<em>/</em>全部资助项目 
+		</div>
+		<ul class="gybox clearfix">
+			<volist name="list" id="data">
+
+				<li {$key|pro_wrap=###,3,'class="gyli"'}>
+					<a href="{:U('Project/detail?id='.$data['id'])}">
+						<img src="{$data['cover_url']|get_cover='path'}"></a>
+					<span class='gy-tit'>{$data.title}</span>
+					<div class="gy-info">
+						<span class='gy-infol'> {$data.begin_time|date='Y/m/d',###}</span>
+						<span class='gy-infor icon-gy{$data.p_status}'>{$p_name[$data[p_status]]}</span>
+					</div>
+
+				</li>
+
+			</volist>
+
+
+		</ul>
+		<div class="list-more list-more2">向下滚动以加载更多</div>
+	</div>
+	
+	
+</div>
+
+</div>
+
+
+<include file="Public/footer" />
+</body>
+</html>
