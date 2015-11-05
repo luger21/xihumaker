@@ -99,7 +99,6 @@ class HomeController extends Controller {
 	public function pro_lists($table,$where,$field='*',$p = 1){
 		/* 分类信息 */
 		$category = $this->category();
-
 		/* 获取当前分类列表 */
 		$list = M($table)->where($where)->page($p, $category['list_row'])->field($field)->order('id')->select();;
 		if(false === $list){

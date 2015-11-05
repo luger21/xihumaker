@@ -24,8 +24,13 @@ class ActivityController extends HomeController {
 
 	    $list = $this->lists();
 	    $this->assign('list',$list);//列表
-	    $this->assign('page',D('Document')->page);//分页
-                 
+	    //$this->assign('page',D('Document')->page);//分页
+	    $nextlist = $this->lists(1);
+	    if(count($nextlist)>0)
+		    $haspage = 1;
+	    else
+		    $haspage = 0;
+	    $this->assign('haspage',$haspage);
         $this->display();
     }
 

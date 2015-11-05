@@ -16,7 +16,7 @@ use OT\DataDictionary;
  */
 class ProjectController extends HomeController {
 	protected function _initialize(){
-		$_GET['category'] = 2;
+		$_GET['category'] = 39;
 	}
 
 	private $table = 'DocumentProject';
@@ -42,6 +42,12 @@ class ProjectController extends HomeController {
 		$list = $this->pro_lists($this->table,$where,$field);
 		$this->assign('list',$list);//列表
 		$this->assign('p_name',$this->p_name);
+		$nextlist = $this->pro_lists($this->table,$where,$field,$p+1);
+		if(count($nextlist)>0)
+			$haspage = 1;
+		else
+			$haspage = 0;
+		$this->assign('haspage',$haspage);
 		$this->display();
 	}
 
@@ -56,6 +62,8 @@ class ProjectController extends HomeController {
 
 	//翻页api接口
 	public function api(){
+		if($_GET['is_1566'] == 1)
+			$where['is_1566'] = 1;
 		if($_GET['p_status'])
 			$where['p_status'] = $_GET['p_status'];
 		$p = $_GET['p']?$_GET['p']:0;
@@ -66,11 +74,20 @@ class ProjectController extends HomeController {
 			$new_list[$key]['id'] = $value['id'];
 			$new_list[$key]['cover_url'] = get_cover($value['cover_url'], 'path');
 			$new_list[$key]['title'] = $value['title'];
-			$new_list[$key]['begin_time'] = $value['begin_time'];
+			$new_list[$key]['begin_time'] = date('Y/m/d',$value['begin_time']);
 			$new_list[$key]['p_name'] = $this->p_name[$value['p_status']];
+			if($key%3==2){
+				$new_list[$key]['class'] = 'class="gyli"';
+			}
 		}
-		//print_r($new_list);
-        echo json_encode($new_list);
+
+		$nextlist = $this->pro_lists($this->table,$where,$field,$p+1);
+		if(count($nextlist)>0)
+			$data['haspage'] = 1;
+		else
+			$data['haspage'] = 0;
+		$data['list'] = $new_list;
+		echo json_encode($data);
 	}
 
 }

@@ -25,8 +25,13 @@ class AttentionsController extends HomeController {
 
 	    $list = $this->lists();
         $this->assign('list',$list);//列表
-        $this->assign('page',D('Document')->page);//分页
-        $this->display();
+	    $nextlist = $this->lists(1);
+	    if(count($nextlist)>0)
+		    $haspage = 1;
+	    else
+		    $haspage = 0;
+	    $this->assign('haspage',$haspage);
+	    $this->display();
     }
 
 	//翻页api接口
@@ -39,9 +44,15 @@ class AttentionsController extends HomeController {
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
 			$new_list[$key]['title'] = $value['title'];
 			$new_list[$key]['description'] = $value['description'];
-			$new_list[$key]['create_time'] = $value['create_time'];
+			$new_list[$key]['create_time'] = date('Y年<br>m月d日',$value['create_time']);
 		}
-		echo json_encode($new_list);
+		$nextlist = $this->lists($p+1);
+		if(count($nextlist)>0)
+			$data['haspage'] = 1;
+		else
+			$data['haspage'] = 0;
+		$data['list'] = $new_list;
+		echo json_encode($data);
 	}
 
 
