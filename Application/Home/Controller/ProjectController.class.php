@@ -24,8 +24,13 @@ class ProjectController extends HomeController {
 
 	//系统首页
     public function index(){
-	    if($_GET['p_status'])
-	        $where['p_status'] = $_GET['p_status'];
+	    if($_GET['p_status']>0){
+		    $where['p_status'] = $_GET['p_status'];
+		    $this->assign('p_status',$_GET['p_status']);
+	    }else{
+		    $this->assign('p_status',0);
+	    }
+
 	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
 	    $list = $this->pro_lists($this->table,$where,$field);
 	    $this->assign('list',$list);//列表

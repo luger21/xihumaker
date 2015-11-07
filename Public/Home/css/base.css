@@ -34,3 +34,4 @@ i,em{ font-style: normal;}
 body{ background-color: #eeeeee;}
 #back-to-top{right: 15px; cursor: pointer;  display: none; text-indent: -9999px; width: 108px; height: 108px; background: url(../images/icon-top.png); position: fixed; bottom: 40px;}
 #back-to-top:hover{ background: url(../images/icon-topon.png);}
+.detialCon img {max-width: 100%;} 

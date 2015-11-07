@@ -29,7 +29,7 @@ class BbsController extends HomeController {
 	    $field = 'a.id,a.ch_title as title,a.cover_url';
 	    $table = 'DocumentMaker';
 	    $order = 'b.view DESC';
-	    $makers = $this->index_lists($table,$where,$field,$order,8);
+	    $makers = $this->index_lists($table,$where,$field,$order,4);
 	    $this->assign('makers',$makers);
 
 	    //获取地区分类数量列表

@@ -16,9 +16,9 @@
 						<div class="act-listr fr">
 							<img src="{$data['cover_id']|get_cover='path'}" height="200" width="200">
 							<div class="act-listrtext">
-								<h5>{$data.title}</h5>
+								<h5>{$data.title|getstr=###,46}</h5>
 								<p class="act-listCon">
-									{$data.description}
+									{$data.content|getstr=###,200}
 								</p>
 								<a href="{:U('Activity/detail?id='.$data['id'])}">阅读全文</a>
 							</div>

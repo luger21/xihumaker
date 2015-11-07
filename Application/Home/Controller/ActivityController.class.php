@@ -23,7 +23,12 @@ class ActivityController extends HomeController {
     public function index(){
 
 	    $list = $this->lists();
-	    $this->assign('list',$list);//列表
+	    foreach($list as $key=>$value){
+		    $detail = $this->article_detail($value['id']);
+		    $new_list[$key]['title'] = $detail['ch_title'];
+		    $new_list[$key]['content'] = $detail['ch_content'];
+	    }
+	    $this->assign('list',$new_list);//列表
 	    //$this->assign('page',D('Document')->page);//分页
 	    $nextlist = $this->lists(1);
 	    if(count($nextlist)>0)
@@ -50,13 +55,14 @@ class ActivityController extends HomeController {
 		$p = $_GET['p']?$_GET['p']:0;
 		$list = $this->lists($p);
 		foreach($list as $key=>$value){
+			$detail = $this->article_detail($value['id']);
 			$new_list[$key]['id'] = $value['id'];
 			$new_list[$key]['act_icon'] = 'act-icon'.rand(0,4);
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
 			if(empty($new_list[$key]['cover_url']))
 				$new_list[$key]['cover_url'] = __ROOT__.'/Public/Home/images/img1.png';
-			$new_list[$key]['title'] = $value['title'];
-			$new_list[$key]['description'] = $value['description'];
+			$new_list[$key]['title'] = getstr($detail['ch_title'],46);
+			$new_list[$key]['content'] = getstr($detail['ch_content'],200);
 			$new_list[$key]['year'] = date('Y年',$value['create_time']);
 			$new_list[$key]['month'] = date('m月d日',$value['create_time']);
 		}

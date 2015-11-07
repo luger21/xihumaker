@@ -60,6 +60,20 @@ class HomeController extends Controller {
 		34=>'澳门',
 	);
 
+	function __construct()
+	{
+		parent::__construct();
+		//获取广告
+		$where = array();
+		$field = 'a.id,a.ch_title,a.en_title,a.out_url';
+		$table = 'DocumentLinks';
+		$links = $this->index_lists($table,$where,$field);
+		foreach($links as $key=>$val){
+			$links[$key]['title'] = $val['ch_title'];
+		}
+
+		$this->assign('links',$links);
+	}
 
 	/* 空操作，用于输出404页面 */
 	public function _empty(){
@@ -75,6 +89,8 @@ class HomeController extends Controller {
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }
+
+
     }
 
 	/* 用户登录检测 */

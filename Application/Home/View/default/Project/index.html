@@ -2,29 +2,42 @@
 
 <div class="bigbg">
 
-	<div class="wrap">
+	<div class="wrap" >
 		<div class="banner_pro">
 			<img src="__IMG__/in_banner5.png" height="400" width="1000"></div>
-		<ul class="catePro clearfix">
-			<li class="on">
+		<ul class="catePro clearfix" name="1F" id="1F">
+            <a href="{:U('Project/index#1F')}">
+			<li <if condition="$p_status eq 0">class="on"</if>>
+
 				<span class='icon-cate1'>全部分类</span>
 
 			</li>
-			<li>
+
+            <a href="{:U('Project/index?p_status=1#1F')}">
+			<li <if condition="$p_status eq 1">class="on"</if>>
 				<span class='icon-cate2'>进行中</span>
 			</li>
-			<li>
+            </a>
+            <a href="{:U('Project/index?p_status=2#1F')}">
+			<li <if condition="$p_status eq 2">class="on"</if>>
 				<span class='icon-cate3'>组团队</span>
 			</li>
-			<li>
+            </a>
+            <a href="{:U('Project/index?p_status=3#1F')}">
+			<li <if condition="$p_status eq 3">class="on"</if>>
 				<span class='icon-cate4'>组队中</span>
 			</li>
-			<li>
+            </a>
+            <a href="{:U('Project/index?p_status=4#1F')}">
+			<li <if condition="$p_status eq 4">class="on"</if>>
 				<span class='icon-cate5'>已商业</span>
 			</li>
-			<li class="cate-li">
+            </a>
+            <a href="{:U('Project/index?p_status=5#1F')}">
+			<li <if condition="$p_status eq 5">class="cate-li on"<else/>class="cate-li"</if>>
 				<span class='icon-cate6'>已商业</span>
 			</li>
+            </a>
 		</ul>
 		<ul class="gybox clearfix" id="projectList" data-curpage='1' data-haspage="{$haspage}">
             <volist name="list" id="data">
@@ -45,7 +58,9 @@
 
 
 		</ul>
+        <if condition="$haspage eq 1">
 		<div class="list-more list-more2">向下滚动以加载更多</div>
+        </if>
 	</div>
 
 </div>
