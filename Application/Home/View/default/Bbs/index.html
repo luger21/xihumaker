@@ -20,109 +20,32 @@
 			<!--stretch start-->
 			<div class="stretch_bg">
 				<div class="strech">
-					<div class="show">
-						<p id="arrows" class="arrows_up"> <i class="arrows_down "></i>
+					<div class="show"  name="1F" id="1F">
+						<p id="arrows" class="arrows_up">
+                            <i class="arrows_down "></i>
 						</p>
-						<span class="cur_province"> <b>全部创客</b>
+                        <a href="{:U('Bbs/index#1F')}">
+						<span <if condition="$area eq 0">class="cur_province"</if>>
+                        <b>全部创客</b>
 						</span>
-						<span> <b>北京市</b> <i>(2)</i>
+                        </a>
+                        <volist name="arealist" id="data" offset="0" length='5'>
+                        <a href="{:U('Bbs/index')}?area={$data.area}#1F">
+						<span <if condition="$area eq $data[area]">class="cur_province"</if>>
+                            <b>{$area_name[$data[area]]}</b>
+                            <i>({$data.num})</i>
 						</span>
-						<span>
-							<b>天津市</b>
-							<i>(2)</i>
-						</span>
-						<span>
-							<b>上海市</b>
-							<i>(3)</i>
-						</span>
-						<span>
-							<b>重庆市</b>
-							<i>(2)</i>
-						</span>
-						<span>
-							<b>河北省</b>
-							<i>(3)</i>
-						</span>
-						<span>
-							<b>山西省</b>
-							<i>(3)</i>
-						</span>
-						
+                        </a>
+                        </volist>
 
 					</div>
 					<div class="hide">
-					<span>
-							<b>辽宁省</b>
-							<i>(4)</i>
-						</span>
+                        <volist name="arealist" id="data" offset="5">
 						<span>
-							<b>黑龙江省</b>
-							<i>(1)</i>
+                            <b>{$area_name[$data[area]]}</b>
+                            <i>({$data.num})</i>
 						</span>
-						<span>
-							<b>江苏省</b>
-							<i>(8)</i>
-						</span>
-						<span >
-							<b>浙江省</b>
-							<i>(12)</i>
-						</span>
-						<span >
-							<b>安徽省</b>
-							<i>(1)</i>
-						</span>
-						<span >
-							<b>福建省</b>
-							<i>(3)</i>
-						</span>
-						<span >
-							<b>江西省</b>
-							<i>(1)</i>
-						</span>
-						<span >
-							<b>山东省</b>
-							<i>(3)</i>
-						</span>
-						<span >
-							<b>河南省</b>
-							<i>(5)</i>
-						</span>
-						<span >
-							<b>湖北省</b>
-							<i>(3)</i>
-						</span>
-						<span >
-							<b>湖南省</b>
-							<i>(1)</i>
-						</span>
-						<span >
-							<b>广东省</b>
-							<i>(21)</i>
-						</span>
-						<span >
-							<b>重庆市</b>
-							<i>(2)</i>
-						</span>
-						<span >
-							<b>四川省</b>
-							<i>(6)</i>
-						</span>
-						<span >
-							<b>贵州省</b>
-							<i>(1)</i>
-						</span>
-						<span >
-							<b>云南省</b>
-							<i>(1)</i>
-						</span>
-						<span >
-							<b>陕西省</b>
-							<i>(4)</i>
-						</span>
-						<span >
-							<b>广西壮族自治区</b>
-							<i>(1)</i>
-						</span>
+                        </volist>
 					</div>
 
 				</div>
@@ -133,92 +56,22 @@
 
 
 		<div class="bbsbox allck_box clearfix">
-			<h5>江西创客空间</h5>
+            <volist name="list" id="data">
+			<h5>{$area_name[$key]}创客空间</h5>
 			<ul class="gybox clearfix">
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li class="gyli">
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-		</ul>
+                <assign name="sonlist" value="$data" />
+                <volist name="sonlist" id="data">
+                <li {$key|pro_wrap=###,3,'class="gyli"'}>
+                    <img src="{$data['cover_url']|get_cover='path'}">
+                    <span class='gy-tit'>{$data.title}</span>
+                    <div class="gy-info">
+                        {$data.content|getstr=###,50}
+                    </div>
+                </li>
+                </volist>
+		    </ul>
+            </volist>
 
-
-		<h5>浙江创客空间</h5>
-			<ul class="gybox clearfix">
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li class="gyli">
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-		</ul>
-
-
-
-		<h5>北京创客空间</h5>
-			<ul class="gybox clearfix">
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li>
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-			<li class="gyli">
-				<img src="__IMG__/img1.jpg">
-				<span class='gy-tit'>盘子是装菜的必须的器皿</span>
-				<div class="gy-info">
-					我们会陆续添加线上&线下活动，包括产品
-试用、社区福利、微活动等
-				</div>
-			</li>
-		</ul>
 		</div>
 	</div>
 </div>

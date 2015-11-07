@@ -33,16 +33,32 @@ class BbsController extends HomeController {
 	    $this->assign('makers',$makers);
 
 	    //获取地区分类数量列表
-	    $arealist = M('documentMaker')->field('area,count(*) as num')->group('area')->select();
+	    $arealist = M('documentMaker')->field('id,area,count(*) as num')->group('area')->select();
 	    //print_r($arealist);
 	    $this->assign('arealist',$arealist);
 	    $this->assign('area_name',$this->area_name);
 
-	    if($_GET['area'])
+	    if($_GET['area']){
 		    $where['area'] = $_GET['area'];
-	    $field = 'id,ch_title as title,ch_content as content,cover_url';
+		    $this->assign('area',$_GET['area']);
+	    }else{
+		    $this->assign('area',0);
+	    }
+
+	    $field = 'id,ch_title,en_title,ch_content,en_content,area,cover_url';
 	    $list = $this->pro_lists($this->table,$where,$field);
-	    $this->assign('list',$list);//列表
+	    //print_r($list);
+	    $newlist = array();
+	    foreach($list as $val){
+		    if(!$newlist[$val['area']])
+			    $newlist[$val['area']] = array();
+		    $val['title'] = $val['ch_title'];
+		    $val['content'] = $val['ch_content'];
+		    $newlist[$val['area']][] = $val;
+
+	    }
+	    //print_r($newlist);exit;
+	    $this->assign('list',$newlist);//列表
         $this->display();
     }
 

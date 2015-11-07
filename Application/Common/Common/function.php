@@ -528,7 +528,6 @@ function get_document_model($id = null, $field = null){
     if(empty($list)){
         $list = S('DOCUMENT_MODEL_LIST');
     }
-
     /* 获取模型名称 */
     if(empty($list)){
         $map   = array('status' => 1, 'extend' => 1);

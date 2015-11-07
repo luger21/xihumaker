@@ -16,19 +16,33 @@ use OT\DataDictionary;
  */
 class ResourcesController extends HomeController {
 
+	protected function _initialize(){
+		$_GET['category'] = 46;
+	}
+
 	//系统首页
     public function index(){
-
-        $category = D('Category')->getTree();
-        $lists    = D('Document')->lists(null);
-
-        $this->assign('category',$category);//栏目
-        $this->assign('lists',$lists);//列表
-        $this->assign('page',D('Document')->page);//分页
-
-                 
+	    $where = '';
+	    $field = 'a.id,a.ch_title,a.ch_content,a.en_title,a.en_content';
+	    $table = 'DocumentResources';
+	    $order = 'b.level DESC';
+	    $resources = $this->index_lists($table,$where,$field,$order,10);
+	    foreach($resources as $key=>$val){
+		    $resources[$key] = $val;
+		    $resources[$key]['title'] = $val['ch_title'];
+		    $resources[$key]['content'] = $val['ch_content'];
+	    }
+	    $this->assign('list',$resources);
         $this->display();
     }
 
+	public function detail()
+	{
+		$info = $this->article_detail($_GET['id']);
+		$info['title'] = $info['ch_title'];
+		$info['content'] = $info['ch_content'];
+		$this->assign('info', $info);
+		$this->display();
+	}
 
 }

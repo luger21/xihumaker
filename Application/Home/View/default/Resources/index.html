@@ -17,67 +17,33 @@
 		<img src="__IMG__/resources_img.jpg">
 	</div>
 
-	<div class="re-tit">
-		无偿资助
-	</div>
-	<div class="re-info clearfix">
-		他，从农村走来，却为了创业放弃仕途; <br>
-他，参加过第一届“赢在中国”，小小失利更激发了他的斗志; <br>
-70末的他，如今已是一家资产过亿公司的副总裁; <br>
-他要做中国杰出的企业家、世界一流的演讲家、教育家、慈善家！ 
+    <volist name="list" id="data"  offset="0" length='1'>
 
+        <a href="{:U('Resources/detail?id='.$data['id'])}">
+            <div class="re-tit">
+                {$data.title}
+            </div>
+        </a>
+	<div class="re-info clearfix">
+        {$data.content|getstr=###,500}
 	</div>
+    </volist>
 	<div class="clear"></div>
 	<div class="re-btn">
 		<img src="__IMG__/re_add.png" id="sqjj-btn">
 	</div>
-	<div class="re-tit clearfix">
-		免费场地
-	</div>
+    <volist name="list" id="data"  offset="1">
+        <a href="{:U('Resources/detail?id='.$data['id'])}">
+        <div class="re-tit clearfix">
+        {$data.title}
+	    </div>
+        </a>
 	<div class="clear"></div>
 	<div class="re-info clearfix">
-		他，从农村走来，却为了创业放弃仕途; <br>
-他，参加过第一届“赢在中国”，小小失利更激发了他的斗志; <br>
-70末的他，如今已是一家资产过亿公司的副总裁; <br>
-他要做中国杰出的企业家、世界一流的演讲家、教育家、慈善家！ 
-
+        {$data.content|getstr=###,500}
 	</div>
 	<div class="clear"></div>
-	<div class="re-tit clearfix">
-		大咖指导
-	</div>
-	<div class="clear"></div>
-	<div class="re-info clearfix">
-		他，从农村走来，却为了创业放弃仕途; <br>
-他，参加过第一届“赢在中国”，小小失利更激发了他的斗志; <br>
-70末的他，如今已是一家资产过亿公司的副总裁; <br>
-他要做中国杰出的企业家、世界一流的演讲家、教育家、慈善家！ 
-
-	</div>
-	<div class="clear"></div>
-	<div class="re-tit clearfix">
-		工具设备
-	</div>
-	<div class="clear"></div>
-	<div class="re-info clearfix">
-		他，从农村走来，却为了创业放弃仕途; <br>
-他，参加过第一届“赢在中国”，小小失利更激发了他的斗志; <br>
-70末的他，如今已是一家资产过亿公司的副总裁; <br>
-他要做中国杰出的企业家、世界一流的演讲家、教育家、慈善家！ 
-
-	</div>
-	<div class="clear"></div>
-	<div class="re-tit clearfix">
-		媒体及人脉
-	</div>
-	<div class="clear"></div>
-	<div class="re-info clearfix">
-		他，从农村走来，却为了创业放弃仕途; <br>
-他，参加过第一届“赢在中国”，小小失利更激发了他的斗志; <br>
-70末的他，如今已是一家资产过亿公司的副总裁; <br>
-他要做中国杰出的企业家、世界一流的演讲家、教育家、慈善家！ 
-
-	</div>
+    </volist>
 </div>
 </div>
 <!-- 弹窗 start -->

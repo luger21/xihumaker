@@ -47,7 +47,7 @@ class ProjectController extends HomeController {
 		$list = $this->pro_lists($this->table,$where,$field);
 		$this->assign('list',$list);//列表
 		$this->assign('p_name',$this->p_name);
-		$nextlist = $this->pro_lists($this->table,$where,$field,$p+1);
+		$nextlist = $this->pro_lists($this->table,$where,$field,1);
 		if(count($nextlist)>0)
 			$haspage = 1;
 		else

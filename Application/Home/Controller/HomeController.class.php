@@ -117,6 +117,7 @@ class HomeController extends Controller {
 		$category = $this->category();
 		/* 获取当前分类列表 */
 		$list = M($table)->where($where)->page($p, $category['list_row'])->field($field)->order('id')->select();;
+		//echo M($table)->getLastSql();
 		if(false === $list){
 			$this->error('获取列表数据失败！');
 		}
