@@ -24,6 +24,7 @@ class ActivityController extends HomeController {
 
 	    $list = $this->lists();
 	    foreach($list as $key=>$value){
+		    $new_list[$key] = $value;
 		    $detail = $this->article_detail($value['id']);
 		    $new_list[$key]['title'] = $detail['ch_title'];
 		    $new_list[$key]['content'] = $detail['ch_content'];
