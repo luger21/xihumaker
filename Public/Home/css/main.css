@@ -83,7 +83,7 @@
 .icon-address{background:url(../images/icon2.png) no-repeat; padding-left: 40px;}
 .loaction{ font-size: 18px; color: #666; line-height: 80px;}
 .loaction a,.loaction em{ color: #aeaeae;}.loaction em{ padding: 0 10px;}
-.detialCon{ padding: 20px 0px;}
+.detialCon{ padding: 20px}
 .bbsbox h5{ margin-bottom: 35px; height: 30px; font-size: 24px; color: #666;background:url(../images/icon-bbstit.png) no-repeat; padding-left: 30px; font-weight: normal; line-height: 30px;  }
 .bbsbox{ padding: 60px 0 0 0;}
 .allck_box{padding: 20px 0 0 0;}
