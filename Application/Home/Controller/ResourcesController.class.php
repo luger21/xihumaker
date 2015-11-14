@@ -38,6 +38,9 @@ class ResourcesController extends HomeController {
 
 	public function detail()
 	{
+		if($_GET['id']==46){
+			redirect(U('Bigshot/index'));
+		}
 		$info = $this->article_detail($_GET['id']);
 		$info['title'] = $info['ch_title'];
 		$info['content'] = $info['ch_content'];
