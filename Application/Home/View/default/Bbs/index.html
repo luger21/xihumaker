@@ -62,11 +62,13 @@
                 <assign name="sonlist" value="$data" />
                 <volist name="sonlist" id="data">
                 <li {$key|pro_wrap=###,3,'class="gyli"'}>
+                    <a href="{$data.out_url}" target="_blank">
                     <img src="{$data['cover_url']|get_cover='path'}">
                     <span class='gy-tit'>{$data.title}</span>
                     <div class="gy-info">
                         {$data.content|getstr=###,50}
                     </div>
+                    </a>
                 </li>
                 </volist>
 		    </ul>

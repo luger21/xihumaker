@@ -45,7 +45,7 @@ class BbsController extends HomeController {
 		    $this->assign('area',0);
 	    }
 
-	    $field = 'id,ch_title,en_title,ch_content,en_content,area,cover_url';
+	    $field = 'id,ch_title,en_title,ch_content,en_content,area,cover_url,out_url';
 	    $list = $this->pro_lists($this->table,$where,$field);
 	    //print_r($list);
 	    $newlist = array();

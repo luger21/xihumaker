@@ -44,19 +44,16 @@
         </h1>
 
         <ul class="active-list active-list2">
-            <li>
-                <a href="#">
-                    <img src="__IMG__/main-img4.png" ></a>
+            <li id="sqjj-btn1">
+                <img src="__IMG__/main-img4.png" >
                 <h6>关于1566</h6>
             </li>
-            <li>
-                <a href="#">
-                    <img src="__IMG__/main-img5.png" ></a>
-                <h6 id="sqjj-btn">申请基金</h6>
+            <li id="sqjj-btn2">
+                <img src="__IMG__/main-img5.png" >
+                <h6 >申请基金</h6>
             </li>
-            <li>
-                <a href="#">
-                    <img src="__IMG__/main-img6.png" ></a>
+            <li id="sqjj-btn3">
+                <img src="__IMG__/main-img6.png" >
                 <h6>公益捐赠</h6>
             </li>
             <li class="actionlist-tit">资助的项目</li>
@@ -106,7 +103,7 @@
 <div class="poppubBox" style="height:600px;display:none">
 	<div class="pubconbox">
 
-		<div class="pub-gycon">
+		<div class="pub-gycon" id="sqjj3">
 			<h3 class="pub-tit">公益捐赠</h3>
 			<div class="pubcon-info">
 			<br>
@@ -124,7 +121,7 @@
 			</div>
 		</div>
 
-		<div class="pub-gycon" style="display:none">
+		<div class="pub-gycon" id="sqjj1" style="display:none">
 			<h3 class="pub-tit">1566 创客公益基金的故事</h3>
 			<img src="__IMG__/img5.png" height="194" width="618">
 			<br>
@@ -135,7 +132,7 @@
 			<div class="pub-btn">申请基金</div>
 		</div>
 		
-		<div class="pub-gycon" style="display:none">
+		<div class="pub-gycon" id="sqjj2" style="display:none">
 			<h3 class="pub-tit">申请流程与事项</h3>
 			<div class="pubcon-info">
 			<br>
@@ -164,8 +161,51 @@
 <script type="text/javascript">
 var J_poppubBox=$('.poppubBox');
 var J_poppubbg=$('.poppubbg');
+    //弹出
+    $('#sqjj-btn1').on('click',function(){
+        $("#sqjj1").css('display','block');
+        $("#sqjj2").css('display','none');
+        $("#sqjj3").css('display','none');
+        $('.poppubbg,.poppubBox').show();
+        var _WinHeight=$(window).height();
+        if(_WinHeight>600){
+            var J_popHeight=(_WinHeight-600)/2;
+            J_poppubBox.css({
+                top: J_popHeight+'px',
+
+            });
+        }else{
+            J_poppubBox.css({
+                top: 0+'px'
+            });
+        }
+
+    });
+    //弹出
+    $('#sqjj-btn2').on('click',function(){
+        $("#sqjj1").css('display','none');
+        $("#sqjj2").css('display','block');
+        $("#sqjj3").css('display','none');
+        $('.poppubbg,.poppubBox').show();
+        var _WinHeight=$(window).height();
+        if(_WinHeight>600){
+            var J_popHeight=(_WinHeight-600)/2;
+            J_poppubBox.css({
+                top: J_popHeight+'px',
+
+            });
+        }else{
+            J_poppubBox.css({
+                top: 0+'px'
+            });
+        }
+
+    });
 	//弹出
-	$('#sqjj-btn').on('click',function(){
+	$('#sqjj-btn3').on('click',function(){
+        $("#sqjj1").css('display','none');
+        $("#sqjj2").css('display','none');
+        $("#sqjj3").css('display','block');
 		$('.poppubbg,.poppubBox').show();
 		var _WinHeight=$(window).height();
 		if(_WinHeight>600){
