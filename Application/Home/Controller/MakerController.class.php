@@ -14,12 +14,12 @@ use OT\DataDictionary;
  * 前台首页控制器
  * 主要获取首页聚合数据
  */
-class BigshotController extends HomeController {
+class MakerController extends HomeController {
 
-	private $table = 'DocumentBigshot';
+	private $table = 'DocumentMaker';
 
 	protected function _initialize(){
-		$_GET['category'] = 48;
+		$_GET['category'] = 40;
 
 	}
 	//系统首页
@@ -29,12 +29,12 @@ class BigshotController extends HomeController {
 
 	    $field = 'id,ch_title,en_title,ch_content,en_content,cover_url';
 	    $list = M($this->table)->where($where)->field($field)->select();
-	    //$list = $this->pro_lists($this->table,$where,$field);
 	    //print_r($list);
 	    $newlist = array();
 	    foreach($list as $key=>$val) {
 		    $list[$key]['title'] = $val['ch_title'];
 		    $list[$key]['content'] = $val['ch_content'];
+
 	    }
 	    //print_r($newlist);exit;
 	    $this->assign('list',$list);//列表

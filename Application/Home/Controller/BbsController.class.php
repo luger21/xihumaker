@@ -16,7 +16,7 @@ use OT\DataDictionary;
  */
 class BbsController extends HomeController {
 
-	private $table = 'DocumentMaker';
+	private $table = 'DocumentMakerzone';
 
 	protected function _initialize(){
 		$_GET['category'] = 40;
@@ -33,7 +33,7 @@ class BbsController extends HomeController {
 	    $this->assign('makers',$makers);
 
 	    //获取地区分类数量列表
-	    $arealist = M('documentMaker')->field('id,area,count(*) as num')->group('area')->select();
+	    $arealist = M('documentMakerzone')->field('id,area,count(*) as num')->group('area')->select();
 	    //print_r($arealist);
 	    $this->assign('arealist',$arealist);
 	    $this->assign('area_name',$this->area_name);

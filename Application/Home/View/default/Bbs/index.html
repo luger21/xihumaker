@@ -6,14 +6,15 @@
 			<ul class="bbslist clearfix">
 				<volist name="makers" id="data">
 					<li {$key|pro_wrap=###,4,'class="bbsItem"'}>
-						<a href="{:U('Bbs/detail?id='.$data['id'])}">
+						<a href="{:U('Maker/detail?id='.$data['id'])}">
 							<img src="{$data['cover_id']|get_cover='path'}" height="190" width="290">
 							<span>{$data.title}</span>
 						</a>
 					</li>
 				</volist>
 			</ul>
-
+            <div class="ckmore"> <a href="{:U('Maker/index')}"><em>查看更多</em></a>
+            </div>
 
 
 			<div class="clear"></div>
@@ -26,7 +27,7 @@
 						</p>
                         <a href="{:U('Bbs/index#1F')}">
 						<span <if condition="$area eq 0">class="cur_province"</if>>
-                        <b>全部创客</b>
+                        <b>创客空间</b>
 						</span>
                         </a>
                         <volist name="arealist" id="data" offset="0" length='5'>

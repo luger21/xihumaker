@@ -2,11 +2,11 @@
 <div class="bigbg">
 	<div class="wrap ">
 		<div class="bbsbox clearfix">
-			<h5>大咖列表</h5>
+			<h5>创客列表</h5>
 			<ul class="bbslist clearfix">
 				<volist name="list" id="data">
 					<li {$key|pro_wrap=###,4,'class="bbsItem"'}>
-						<a href="{:U('Bigshot/detail?id='.$data['id'])}">
+						<a href="{:U('Maker/detail?id='.$data['id'])}">
 							<img src="{$data['cover_url']|get_cover='path'}" height="190" width="290">
 							<span>{$data.title}</span>
 						</a>

@@ -14,7 +14,7 @@
 .active-tit2 i{background:url(../images/icon2.png) 0 0px no-repeat;}
 .active-tit3 i{background:url(../images/icon3.png) 0 5px no-repeat;}
 .active-list{ padding: 70px 0 0 86px;}
-.active-list li{ width: 234px; margin: 0 21px; float: left;}
+.active-list li{ position: relative;width: 234px; margin: 0 21px; float: left;}
 .active-list li p{ color: #666;}
 .active-list li img{ margin-bottom: 25px; width: 234px; height: 315px;}
 .active-list2 li img{ height: 157px;}
@@ -22,6 +22,7 @@
 .active-list2 li.actionlist-tit{ width: 1000px; height: 32px; font-size: 25px; color: #000; margin: 20px 0 39px;}
 .active-list2 li{ margin-bottom: 20px;}
 .active-list2 h6{ text-align: center; color:#666; line-height: 52px; height: 52px; font-size: 24px; font-weight: normal;}
+.active-list2 li h6{ position: absolute; bottom: -40px; height: 56px; line-height: 56px; font-size: 18px; color: #000; font-weight: normal; text-indent: 15px;}
 .active-list li i{ display: block; font-size: 12px; margin-top: 5px;}
 .active-list li em{ font-size: 18px;}
 .active-list li span{ font-size: 24px;}
@@ -32,7 +33,7 @@
 .main-item2{ height: 740px;background:url(../images/mainbg2.png) center 0; }
 .main-item3{ height: 488px;background:url(../images/mainbg3.png) center 0; }
 .active-list3 li{ position: relative; height:196px;}
-.active-list3 li h6{ position: absolute; bottom: 0; height: 56px; line-height: 56px; font-size: 18px; color: #fff; font-weight: normal; text-indent: 15px;}
+.active-list3 li h6{ position: absolute; bottom: -45px; height: 56px; line-height: 56px; font-size: 18px; color: #000; font-weight: normal; text-indent: 15px;}
 .footer-topl{ width: 690px; padding-right: 0px;}
 .active-list3 li img{ height: 196px;}
 .footer-top{ padding: 20px 0px 0; width: 1000px;}
