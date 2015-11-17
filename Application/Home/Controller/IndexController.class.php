@@ -19,25 +19,29 @@ class IndexController extends HomeController {
 	//系统首页
     public function index(){
 	    //获取广告
+	    $where['b.status'] = 1;
 	    $where['ad_type'] = 1;
 	    $field = 'a.id,a.ch_title as title,a.ch_img as img';
 	    $table = 'DocumentAds';
 	    $ads = $this->index_lists($table,$where,$field);
 	    $this->assign('ads',$ads);
+	    unset($where);
 	    //获取创客活动
-	    $where = '';
+	    $where['b.status'] = 1;
 	    $field = 'a.id,a.ch_title as title,a.ch_content as content,b.cover_id';
 	    $table = 'DocumentActivity';
 	    $activitys = $this->index_lists($table,$where,$field);
 	    $this->assign('activitys',$activitys);
+	    unset($where);
 		//获取1566项目
 	    $where['is_1566'] = 1;
 	    $field = 'a.id,a.ch_title as title,a.cover_url';
 	    $table = 'DocumentProject';
 	    $projects = $this->index_lists($table,$where,$field);
 	    $this->assign('projects',$projects);
+	    unset($where);
 	    //获取各界关注
-	    $where = '';
+	    $where['b.status'] = 1;
 	    $field = 'a.id,a.ch_title as title,b.cover_id';
 	    $table = 'DocumentAttentions';
 	    $attentions = $this->index_lists($table,$where,$field);

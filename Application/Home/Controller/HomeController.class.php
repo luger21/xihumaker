@@ -101,7 +101,7 @@ class HomeController extends Controller {
 
 
 	/* 首页获取数据 */
-	public function index_lists($table,$where,$field='*',$order='id desc',$limit = 3){
+	public function index_lists($table,$where,$field='*',$order='level desc',$limit = 3){
 		/* 获取当前分类列表 */
 		$list = M($table)->table(M($table)->getTableName().' a') ->join('left join xh_document b ON b.id = a.id')->where($where)->field($field)->order($order)->limit($limit)->select();;
 		//echo M($table)->getLastSql();exit;
