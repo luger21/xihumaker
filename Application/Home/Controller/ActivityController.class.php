@@ -28,6 +28,7 @@ class ActivityController extends HomeController {
 		    $detail = $this->article_detail($value['id']);
 		    $new_list[$key]['title'] = $detail['ch_title'];
 		    $new_list[$key]['content'] = $detail['ch_content'];
+		    $new_list[$key]['begin_time'] = $detail['begin_time'];
 	    }
 	    $this->assign('list',$new_list);//列表
 	    //$this->assign('page',D('Document')->page);//分页
@@ -64,8 +65,8 @@ class ActivityController extends HomeController {
 				$new_list[$key]['cover_url'] = __ROOT__.'/Public/Home/images/img1.png';
 			$new_list[$key]['title'] = getstr($detail['ch_title'],46);
 			$new_list[$key]['content'] = getstr($detail['ch_content'],200);
-			$new_list[$key]['year'] = date('Y年',$value['create_time']);
-			$new_list[$key]['month'] = date('m月d日',$value['create_time']);
+			$new_list[$key]['year'] = date('Y年',$detail['begin_time']);
+			$new_list[$key]['month'] = date('m月d日',$detail['begin_time']);
 		}
 		//print_r($new_list);
 
