@@ -23,7 +23,7 @@ class IndexController extends HomeController {
 	    $where['ad_type'] = 1;
 	    $field = 'a.id,a.ch_title as title,a.ch_img as img';
 	    $table = 'DocumentAds';
-	    $ads = $this->index_lists($table,$where,$field);
+	    $ads = $this->index_lists($table,$where,$field,'level desc',10);
 	    $this->assign('ads',$ads);
 	    unset($where);
 	    //获取创客活动
