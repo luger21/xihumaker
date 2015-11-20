@@ -135,7 +135,7 @@ class HomeController extends Controller {
 
 		/* 获取当前分类列表 */
 		$Document = D('Document');
-		$list = $Document->page($p, $category['list_row'])->lists($category['id']);
+		$list = $Document->page($p, $category['list_row'])->lists($category['id'],'level desc');
 		if(false === $list){
 			$this->error('获取列表数据失败！');
 		}
