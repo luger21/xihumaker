@@ -31,93 +31,13 @@
 			<div class="pro_list">
 				<ul>
 
-					
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about1.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about2.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about3.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about4.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about5.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about6.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about7.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about8.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about9.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about10.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about11.jpg"/>
-						</p>
-					</li>
-					<li>
-						<p>
-							<img height="255" width="270" src="__IMG__/about12.jpg"/>
-						</p>
-					</li>
-                    <li>
-                        <p>
-                            <img height="255" width="270" src="__IMG__/about13.jpg"/>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <img height="255" width="270" src="__IMG__/about14.jpg"/>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <img height="255" width="270" src="__IMG__/about15.jpg"/>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <img height="255" width="270" src="__IMG__/about16.jpg"/>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <img height="255" width="270" src="__IMG__/about17.jpg"/>
-                        </p>
-                    </li>
-
+                    <volist name="ads" id="data">
+                        <li>
+                            <p>
+                                <img height="255" width="270" src="{$data['img']|get_cover='path'}"/>
+                            </p>
+                        </li>
+                    </volist>
 					</ul>
 				</div>
 				<div class="pro_next"></div>

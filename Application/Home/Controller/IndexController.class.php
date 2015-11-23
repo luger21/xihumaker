@@ -50,7 +50,13 @@ class IndexController extends HomeController {
     }
 
 	public function about(){
-
+		//获取广告
+		$where['b.status'] = 1;
+		$where['ad_type'] = 2;
+		$field = 'a.id,a.ch_title as title,a.ch_img as img';
+		$table = 'DocumentAds';
+		$ads = $this->index_lists($table,$where,$field,'level desc',10);
+		$this->assign('ads',$ads);
 		$this->display();
 	}
 
