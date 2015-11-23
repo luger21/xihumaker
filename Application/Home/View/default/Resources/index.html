@@ -52,30 +52,6 @@
 <div class="poppubBox" style="height:600px;display:none">
     <div class="pubconbox">
 
-        <div class="pub-gycon" id="sqjj3">
-            <h3 class="pub-tit">公益捐赠</h3>
-            <div class="pubcon-info">
-                <br>
-                捐助人权益<br>
-                1、荣誉权、知情权、参与权、优先权<br>
-                2、相应额度与范围的对外宣称权<br>
-                3、项目资助投票权：个人-1566元/票，机构-1万元/票<br>
-                4、资助项目接触关注权：优先接触关注自己投票支持的项目<br>
-                5、资助项目辅导权：优先成为创客师友团成员，辅导创客项目<br>
-                6、其他经董事会审计决定增补的权益<br>
-                更为重要的是：爱心公益，不落人后！近朱者赤、与善为邻！<br>
-                详细认捐方式请发短信内容“认捐1566创客公益基金：金额+姓名或单位名称+手机号码”至姚武杰（13958010890）。<br>
-
-                联系方式：<br>
-                微信公众号： 1566FUND<br>
-                姚武杰： 13958010890 微信号同，ywjok@qq.com<br>
-                戴立： 0571-8767 2295，153 8111 0619，DL@xihumaker.com<br><br>
-                <div style="text-align: center"><img src="__IMG__/img_1.png" height="156" width="156">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="__IMG__/img_2.png" height="156" width="156"></div>
-
-            </div>
-        </div>
-
         <div class="pub-gycon" id="sqjj1" style="display:none">
             <h3 class="pub-tit">关于1566创客公益基金：</h3>
 
@@ -104,6 +80,27 @@
             </div>
         </div>
 
+        <div class="pub-gycon" id="sqjj3" style="display:none">
+            <h3 class="pub-tit">公益捐赠</h3>
+            <div class="pubcon-info">
+                <br>
+                捐助人权益<br>
+                1、荣誉权、知情权、参与权、优先权<br>
+                2、相应额度与范围的对外宣称权<br>
+                3、项目资助投票权：个人-1566元/票，机构-1万元/票<br>
+                4、资助项目接触关注权：优先接触关注自己投票支持的项目<br>
+                5、资助项目辅导权：优先成为创客师友团成员，辅导创客项目<br>
+                6、其他经董事会审计决定增补的权益<br>
+                更为重要的是：爱心公益，不落人后！近朱者赤、与善为邻！<br>
+                详细认捐方式请发短信内容“认捐1566创客公益基金：金额+姓名或单位名称+手机号码”至姚武杰（13958010890）。<br>
+
+                联系方式：<br>
+                微信公众号： 1566FUND<br>
+                姚武杰： 13958010890 微信号同，ywjok@qq.com<br>
+                戴立： 0571-8767 2295，153 8111 0619，DL@xihumaker.com<br><br>
+
+            </div>
+        </div>
 
         <div class="pop-close"></div>
 
@@ -117,20 +114,25 @@
 var J_poppubbg=$('.poppubbg');
 	//弹出
 	$('#sqjj-btn').on('click',function(){
-		$('.poppubbg,.poppubBox').show();
-		var _WinHeight=$(window).height();
-		if(_WinHeight>600){
-			var J_popHeight=(_WinHeight-600)/2;
-			J_poppubBox.css({
-				top: J_popHeight+'px',
-				
-			});
-		}else{
-			J_poppubBox.css({
-				top: 0+'px'
-			});
-		}
-		
+        J_index = 2;
+        $("#sqjj1").css('display','none');
+        $("#sqjj2").css('display','none');
+        $("#sqjj3").css('display','block');
+        $(".pop-next").hide();
+        $('.poppubbg,.poppubBox,.pop-pre').show();
+        var _WinHeight=$(window).height();
+        if(_WinHeight>600){
+            var J_popHeight=(_WinHeight-600)/2;
+            J_poppubBox.css({
+                top: J_popHeight+'px',
+
+            });
+        }else{
+            J_poppubBox.css({
+                top: 0+'px'
+            });
+        }
+
 	});
 	$('.pop-close').on('click',function(){
 		J_poppubbg.hide();
@@ -138,35 +140,51 @@ var J_poppubbg=$('.poppubbg');
 	});
 	// 切换
 	var J_index=0;
-	var J_popPre=$('.pop-pre');
-	var J_popNext=$('.pop-next');
-	var J_pubGycon=$('.pub-gycon');
-	J_popNext.hide();
+    var J_popPre=$('.pop-pre');
+    var J_popBtn=$('.pub-btn');
+    var J_popNext=$('.pop-next');
+    var J_pubGycon=$('.pub-gycon');
+    J_popNext.hide();
 
-	J_popPre.on('click',function(){
+    J_popPre.on('click',function(){
 
-		J_index=J_index+1;
-		if(J_index>0){
-			J_popNext.show();
-		}
-		J_pubGycon.hide();
-		J_pubGycon.eq(J_index).show('100');
-		if(J_index==(J_pubGycon.length-1)){
-			J_popPre.hide();
-		}
-	});
-	J_popNext.on('click',function(){
+        J_index=J_index-1;
+        if(J_index<=1){
+            J_popNext.show();
+        }
+        J_pubGycon.hide();
+        J_pubGycon.eq(J_index).show('100');
+        if(J_index==0){
+            J_popPre.hide();
+        }
+    });
 
-		J_index=J_index-1;
-		if(J_index<=0){
-			J_popPre.show();
-		}
-		J_pubGycon.hide();
-		J_pubGycon.eq(J_index).show('100');
-		if(J_index==0){
-			J_popNext.hide();
-		}
-	});
+    J_popBtn.on('click',function(){
+
+        J_index=J_index+1;
+        if(J_index>0){
+            J_popPre.show();
+        }
+        J_pubGycon.hide();
+        J_pubGycon.eq(J_index).show('100');
+        if(J_index==(J_pubGycon.length-1)){
+            J_popNext.hide();
+        }
+    });
+
+    J_popNext.on('click',function(){
+
+        J_index=J_index+1;
+        if(J_index>0){
+            J_popPre.show();
+        }
+        J_pubGycon.hide();
+        J_pubGycon.eq(J_index).show('100');
+        if(J_index==(J_pubGycon.length-1)){
+            J_popNext.hide();
+        }
+    });
+
 </script>
 </body>
 </html>
