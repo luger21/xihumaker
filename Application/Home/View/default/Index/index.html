@@ -1,11 +1,13 @@
 <include file="Public/header" />
 <div class="slide-main" id="touchMain">
-	<a class="prev" href="{$data['url']}" stat="prev1001"><img src="__IMG__/icon-bannerpre.png" /></a>
+	<a class="prev" href="javascript:;" stat="prev1001"><img src="__IMG__/icon-bannerpre.png" /></a>
 	<div class="slide-box" id="slideContent">
         <volist name="ads" id="data">
+            <a href="{$data['url']}">
 		<div class="slide" id="bgstylec" style="background:url({$data['img']|get_cover='path'}) no-repeat center 0;">
 
 		</div>
+            </a>
         </volist>
 	</div>
 	<a class="next" href="javascript:;" stat="next1002"><img src="__IMG__/icon-bannernext.png"/></a>
