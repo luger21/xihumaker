@@ -21,7 +21,7 @@ class IndexController extends HomeController {
 	    //获取广告
 	    $where['b.status'] = 1;
 	    $where['ad_type'] = 1;
-	    $field = 'a.id,a.ch_title as title,a.ch_img as img';
+	    $field = 'a.id,a.ch_title as title,a.ch_img as img,url';
 	    $table = 'DocumentAds';
 	    $ads = $this->index_lists($table,$where,$field,'level desc',10);
 	    $this->assign('ads',$ads);
