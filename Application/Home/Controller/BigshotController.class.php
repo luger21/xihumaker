@@ -27,16 +27,15 @@ class BigshotController extends HomeController {
 	    //获取热门创客
 	    $where = '';
 
-	    $field = 'id,ch_title,en_title,ch_content,en_content,cover_url';
-	    $list = M($this->table)->where($where)->field($field)->select();
-	    //$list = $this->pro_lists($this->table,$where,$field);
-	    //print_r($list);
-	    $newlist = array();
+	    $field = 'a.id,a.ch_title,a.en_title,a.ch_content,a.en_content,a.cover_url';
+
+	    $list = M($this->table)->table(M($this->table)->getTableName().' a') ->join('left join xh_document b ON b.id = a.id')->where($where)->field($field)->order('level desc')->select();;
+
 	    foreach($list as $key=>$val) {
 		    $list[$key]['title'] = $val['ch_title'];
 		    $list[$key]['content'] = $val['ch_content'];
 	    }
-	    //print_r($newlist);exit;
+
 	    $this->assign('list',$list);//列表
         $this->display();
     }
