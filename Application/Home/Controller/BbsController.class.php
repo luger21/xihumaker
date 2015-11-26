@@ -28,7 +28,7 @@ class BbsController extends HomeController {
 	    $where = '';
 	    $field = 'a.id,a.ch_title as title,a.cover_url';
 	    $table = 'DocumentMaker';
-	    $order = 'b.view DESC';
+	    $order = 'b.level DESC';
 	    $makers = $this->index_lists($table,$where,$field,$order,4);
 	    $this->assign('makers',$makers);
 
