@@ -30,11 +30,17 @@ class ProjectController extends HomeController {
 	    }else{
 		    $this->assign('p_status',0);
 	    }
-
+	    $p = $_GET['p']?$_GET['p']:1;
 	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
-	    $list = $this->pro_lists($this->table,$where,$field);
+	    $list = $this->pro_lists($this->table,$where,$field,$p);
 	    $this->assign('list',$list);//列表
 	    $this->assign('p_name',$this->p_name);
+	    $nextlist = $this->pro_lists($this->table,$where,$field,$p+1);
+	    if(count($nextlist)>0)
+		    $haspage = 1;
+	    else
+		    $haspage = 0;
+	    $this->assign('haspage',$haspage);
         $this->display();
     }
 

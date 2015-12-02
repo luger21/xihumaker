@@ -86,6 +86,7 @@
         })
                 .done(function(data) {
                     var J_html = [];
+
                     for (var i in data.list) {
                         J_html.push("<li "+data.list[i].class+" >");
                         J_html.push("<a href='Project/detail?id="+data.list[i].id+"'>");
@@ -94,7 +95,7 @@
                         J_html.push("<div class='gy-info'>");
                         J_html.push(data.list[i].description); //简介
                         J_html.push("<span class='gy-infol'> "+data.list[i].begin_time+"</span>");
-                        J_html.push("<span class='gy-infor icon-gy"+data.list[i].p_status+data.list[i].p_name+"</span>");
+                        J_html.push("<span class='gy-infor icon-gy"+data.list[i].p_status+"'>"+data.list[i].p_name+"</span>");
                         J_html.push("</div></li>");
                     }
                     if (!data.haspage) { //判断是否有下一页
