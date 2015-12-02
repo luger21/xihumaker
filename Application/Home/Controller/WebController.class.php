@@ -45,17 +45,9 @@ class WebController extends HomeController {
 	//系统首页
 	public function pro_index(){
 		$_GET['category'] = 39;
-		$list = $this->lists();
-		foreach($list as $key=>$value){
-			$new_list[$key] = $value;
-			$detail = $this->article_detail($value['id']);
-			$new_list[$key]['title'] = $detail['ch_title'];
-			$new_list[$key]['content'] = $detail['ch_content'];
-			$new_list[$key]['begin_time'] = $detail['begin_time'];
-		}
 
 		$where = '';
-		$field = 'a.id,a.ch_title,a.ch_content,a.en_title,a.en_content';
+		$field = 'a.id,a.ch_title,a.ch_content,a.en_title,a.en_content,a.cover_url';
 		$table = 'DocumentProject';
 		$order = 'b.level DESC';
 		$pros = $this->index_lists($table,$where,$field,$order,100);
