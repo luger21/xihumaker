@@ -1,0 +1,78 @@
+*{ padding:0; margin:0; font-family:"Microsoft YaHei"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+time, mark, audio, video{ margin:0; padding:0; border:0; font-size:100%; text-decoration:none; }
+html { line-height:1; font-size: 62.5% }
+q, blockquote { quotes:none; }
+q:before, q:after, blockquote:before, blockquote:after { content:""; content:none; }
+a img { border:none; }
+ol, ul { list-style:none; }
+table { border-collapse:collapse; border-spacing:0; }
+.ime-disabled{ ime-mode:disabled; } 
+.wrap{ width:1000px; margin:0 auto; font-size:12px; line-height:24px; color:#444;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block;}
+.clear{ clear:both; font-size:0px; height:0px; overflow:hidden; }
+.mt40{ margin-top:40px;}
+.mt30{ margin-top:30px;}
+.mt20{ margin-top:20px;}
+.mt10{ margin-top: 10px;}
+.mb30{margin-bottom: 30px;}
+.mb60{margin-bottom: 60px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.pr{ position: relative;}
+.pa{ position: absolute;}
+.hide{ display: none;}
+.bg-white{ background-color: #fff;}
+body{ min-width: 320px; background-color: #f2f2f2 !important;}
+
+.com-header{ height:64px; background-color:#309}.com-header a{ font-size:24px; color:#fff;}
+
+.pop-comtit{ padding:11px 10px; background-color:#d0454b}
+
+.pop-comtit .com-pop-close{ cursor:pointer;width:7px; height:7px;background:url(../images/pop-close.png) no-repeat; float:right; margin-top:6px;}
+
+.com-modal-tip .modal-dialog{ width:410px !important;}
+.compop-main{ padding:20px;}
+
+.wapbigbox{ width: 100%; max-width: 750px; margin: 0 auto; position: relative;}
+.wapbox{ width: 100%; max-width: 750px; margin: 0 auto; padding: 0 px;}
+
+.borderBox{box-sizing:content-box;}
+
+.com-input{ border: 1px solid #ccc; border-radius: 5px; width: 100%; height: 43px; line-height: 43px; font-size: 14px; padding: 0 5px;}
+
+.com-input:focus,.com-btn:focus{ outline:none;}
+.com-input:focus{ border-color: #999;}
+.com-btn{ height: 45px; width: 100%; line-height: 45px; border-radius: 5px;color: #fff; text-align: center; background-color:#ee6b46; border:0; font-size: 16px; }
+.com-btnGray{ background-color: #ccc; color: #fff;}
+.bge4e4e4{ background-color: #e4e4e4;}
+
+/* 项目开始 */
+.newsBox{ width: 100%;}
+.newsBox li{ height: 75px; box-sizing:border-box; padding: 5px; background-color: #fff; margin-bottom: 5px; position:relative;}
+.newsBox li img{ position: absolute; width: 75px; height: 65px;}
+.news-info{ position: absolute; padding-left: 85px;}
+.news-info h3{ font-size: 1.4rem; line-height: 24px; overflow: hidden; width: 100%; font-weight: normal; color: #000;}
+.news-con{ line-height: 20px; color: #666; font-size: 1.2rem; height:40px; overflow: hidden;}
+.loadMore{ text-align: center; font-size: 1.4rem; height: 2.6rem; line-height: 2.6rem}
+.noMore{ color: #999 !important;}
+.itemBox li{ position: relative;}
+.itemBox li img{ width: 100%;}
+.itemImg{ position: absolute;}
+.item-info{ position: absolute;color: #fff;box-sizing:border-box; bottom: 10px;  padding:0 10px;  height:5rem; width: 100%;  z-index: 8}
+.item-info h3{ font-size: 1.8rem; line-height: 2.6rem;}
+.item-con{ line-height: 1.6rem; padding-bottom: 2rem;}
+.viewcon{ font-size: 1.2rem; color: #666; line-height: 2rem;}
+.viewcon p{ padding: 5px;}
+.viewcon img{width: 100%; margin: 1rem 0;}
+.viewTit{ font-size: 1.8rem;padding: 10px 0 10px 15px ; line-height: 2.6rem;}
+.viewTip{ font-size: 1.4rem; color: #999; text-indent: 15px;}
+.viewTip em{font-variant: normal; font-style: normal; text-indent: 10px;}

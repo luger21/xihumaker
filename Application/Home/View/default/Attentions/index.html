@@ -3,7 +3,7 @@
 	<div class="wrap">
 		<div class="loaction">
 			<a href='/'>首页</a> <em>/</em>
-			<a href='/'>全部活动</a> <em>/</em>
+			<a href='/'>各界关注</a>
 		</div>
 	</div>
 	<div class="wrap ">
@@ -16,7 +16,7 @@
 					<div class="gz-listcon">
 						<a href="{:U('Attentions/detail?id='.$data['id'])}">
 							<h3>{$data.title}</h3>
-							<p class="gz-listinfo">{$data.description}</p>
+							<p class="gz-listinfo">{$data.content|getstr=###,280}</p>
 							<em class='gz-icon'>{$data.view}</em>
 						</a>
 					</div>

@@ -24,7 +24,14 @@ class AttentionsController extends HomeController {
     public function index(){
 
 	    $list = $this->lists();
-        $this->assign('list',$list);//列表
+	    foreach($list as $key=>$value){
+		    $new_list[$key] = $value;
+		    $detail = $this->article_detail($value['id']);
+		    $new_list[$key]['title'] = $detail['ch_title'];
+		    $new_list[$key]['content'] = $detail['ch_content'];
+		    $new_list[$key]['begin_time'] = $detail['begin_time'];
+	    }
+	    $this->assign('list',$new_list);//列表
 	    $nextlist = $this->lists(1);
 	    if(count($nextlist)>0)
 		    $haspage = 1;

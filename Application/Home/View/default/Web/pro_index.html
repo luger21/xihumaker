@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<link rel="stylesheet" href="__CSS__/common.css"></head>
+<body>
+	<div class="wapbox bge4e4e4">
+		<ul class="itemBox" id="itemBox" data-curpage='1' data-haspage="{$haspage}">
+            <volist name="list" id="data">
+            <a href="{:U('Web/pro_detail?id='.$data['id'])}">
+			<li>
+				<img class="itemImg" src="{$data['cover_id']|get_cover='path'}">
+				<div class="item-info">
+					<h3>{$data.title}</h3>
+					<p class="item-con">{$data.content|getstr=###,200}</p>
+				</div>
+			</li>
+            </a>
+            </volist>
+
+		</ul>
+
+	</div>
+	<script src="__JS__/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            initFun();
+            $(window).resize(function() {
+                initFun();
+            });
+
+            function initFun(){
+                var J_itemBox=$('#itemBox');
+                var J_liHeight=J_itemBox.find('img').height();
+                J_itemBox.find('li').height(J_liHeight);
+            }
+
+        })
+
+    </script>
+</body>
+</html>
