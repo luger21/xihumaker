@@ -63,7 +63,7 @@ class ActivityController extends HomeController {
 			$new_list[$key]['cover_url'] = get_cover($value['cover_id'], 'path');
 			if(empty($new_list[$key]['cover_url']))
 				$new_list[$key]['cover_url'] = __ROOT__.'/Public/Home/images/img1.png';
-			$new_list[$key]['title'] = getstr($detail['ch_title'],46);
+			$new_list[$key]['title'] = getstr($detail['ch_title'],42);
 			$new_list[$key]['content'] = getstr($detail['ch_content'],200);
 			$new_list[$key]['year'] = date('Y年',$detail['begin_time']);
 			$new_list[$key]['month'] = date('m月d日',$detail['begin_time']);

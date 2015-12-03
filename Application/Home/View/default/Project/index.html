@@ -39,7 +39,11 @@
 			</li>
             </a>
 		</ul>
+        <empty name="list">
+            <div class="list-more list-more2">暂时没有项目</div>
+        </empty>
 		<ul class="gybox clearfix" id="projectList" data-curpage='1' data-haspage="{$haspage}">
+
             <volist name="list" id="data">
 
 			<li {$key|pro_wrap=###,3,'class="gyli"'}>
@@ -58,8 +62,9 @@
 
 
 		</ul>
+
         <if condition="$haspage eq 1">
-		<div class="list-more list-more2">向下滚动以加载更多</div>
+		    <div class="list-more list-more2">向下滚动以加载更多</div>
         </if>
 	</div>
 
