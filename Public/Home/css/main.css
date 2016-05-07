@@ -78,7 +78,7 @@
 .list-more2{margin-top: 0px;}
 .pubBox{ width: 160px; height: 138px;background:url(../images/icon-send.png) no-repeat; position: fixed; right: 10px; top: 230px;}
 .pubBox:hover{ cursor: pointer; background:url(../images/icon-sendOn.png) no-repeat; }
-.inbanner{ height: 399px; width: 100%;background:url(../images/in_banner1.jpg) no-repeat center 0;}
+.inbanner{ height: 399px; width: 100%;}
 .detialBox{ height: 42px; padding: 20px 0 ;}
 .detialBox span{height: 42px;float: left; font-size: 18px; color: #666;line-height: 42px;} 
 .icon-time{margin:0 120px 0 144px; background:url(../images/icon-time.png) no-repeat; padding-left: 50px;}

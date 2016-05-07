@@ -45,6 +45,7 @@ class ActivityController extends HomeController {
 	{
 
 		$info = $this->article_detail($_GET['id']);
+		$info['top_pic'] = $info['top_pic'];
 		$info['address'] = $info['ch_address'];
 		$info['title'] = $info['ch_title'];
 		$info['content'] = $info['ch_content'];

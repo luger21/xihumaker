@@ -30,10 +30,25 @@ class ProjectController extends HomeController {
 	    }else{
 		    $this->assign('p_status',0);
 	    }
-	    $p = $_GET['p']?$_GET['p']:1;
+		$p = $_GET['p']?$_GET['p']:1;
+		$where2['model_id'] = 4;
+		$list2 = M('Document')->where($where2)->order('level desc')->page($p, 9)->getField('id',true);
+		$where['id'] = array('in',$list2);
 	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
 	    $list = $this->pro_lists($this->table,$where,$field,$p);
-	    $this->assign('list',$list);//列表
+		//print_r($list2);exit;
+		foreach($list2 as $val){
+			foreach($list as $key2=>$val2){
+				if($val == $val2['id']){
+					unset($list[$key2]);
+					$list_new[] = $val2;
+					continue;
+				}
+			}
+		}
+		//exit;
+		//print_r($list_new);
+	    $this->assign('list',$list_new);//列表
 	    $this->assign('p_name',$this->p_name);
 	    $nextlist = $this->pro_lists($this->table,$where,$field,$p+1);
 	    if(count($nextlist)>0)
