@@ -80,6 +80,7 @@ class ProjectController extends HomeController {
 	public function detail()
 	{
 		$info = $this->article_detail($_GET['id']);
+		$info['top_pic'] = $info['top_pic'];
 		$info['title'] = $info['ch_title'];
 		$info['content'] = $info['ch_content'];
 		$this->assign('info', $info);
