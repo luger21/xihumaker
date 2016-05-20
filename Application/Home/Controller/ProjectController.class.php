@@ -32,6 +32,7 @@ class ProjectController extends HomeController {
 	    }
 		$p = $_GET['p']?$_GET['p']:1;
 		$where2['model_id'] = 4;
+		$where2['status'] = 1;
 		$list2 = M('Document')->where($where2)->order('level desc')->page($p, 9)->getField('id',true);
 		$where['id'] = array('in',$list2);
 	    $field = 'id,ch_title as title,ch_content as content,cover_url,p_status,begin_time';
